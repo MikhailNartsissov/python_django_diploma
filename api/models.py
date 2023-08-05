@@ -6,6 +6,34 @@ class Tag(models.Model):
     name = models.CharField(max_length=20, null=False, blank=False)
 
 
+def category_images_directory_path(instance: "Category", filename: str) -> str:
+    return "categories/category_{pk}/images/{filename}".format(
+        pk=instance.pk,
+        filename=filename,
+    )
+
+
+class Category(models.Model):
+    title = models.CharField(max_length=30, blank=False, null=False)
+    src = models.ImageField(null=True, blank=True, upload_to=category_images_directory_path)
+    alt = models.CharField(max_length=50, default="There should be an image of the category")
+
+
+def subcategory_images_directory_path(instance: "Subcategory", filename: str) -> str:
+    return "categories/category_{pk}/subcategory_{spk}/images/{filename}".format(
+        pk=instance.category.pk,
+        spk=instance.pk,
+        filename=filename,
+    )
+
+
+class Subcategory(models.Model):
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    title = models.CharField(max_length=30, blank=False, null=False)
+    src = models.ImageField(null=True, blank=True, upload_to=category_images_directory_path)
+    alt = models.CharField(max_length=50, default="There should be an image of the category")
+
+
 class Product(models.Model):
 
     title = models.CharField(max_length=100, null=False, blank=False)
