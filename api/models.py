@@ -7,24 +7,17 @@ class Tag(models.Model):
 
 
 def category_images_directory_path(instance: "Category", filename: str) -> str:
-    return "categories/category_{pk}/images/{filename}".format(
-        pk=instance.pk,
-        filename=filename,
-    )
+    return "api/categories/{filename}".format(filename=filename)
+
+
+def subcategory_images_directory_path(instance: "Subcategory", filename: str) -> str:
+    return "api/categories/{filename}".format(filename=filename)
 
 
 class Category(models.Model):
     title = models.CharField(max_length=30, blank=False, null=False)
     src = models.ImageField(null=True, blank=True, upload_to=category_images_directory_path)
     alt = models.CharField(max_length=50, default="There should be an image of the category")
-
-
-def subcategory_images_directory_path(instance: "Subcategory", filename: str) -> str:
-    return "categories/category_{pk}/subcategory_{spk}/images/{filename}".format(
-        pk=instance.category.pk,
-        spk=instance.pk,
-        filename=filename,
-    )
 
 
 class Subcategory(models.Model):
@@ -35,7 +28,7 @@ class Subcategory(models.Model):
 
 
 class Product(models.Model):
-
+    category = models.ForeignKey(Subcategory, on_delete=models.PROTECT)
     title = models.CharField(max_length=100, null=False, blank=False)
     description = models.TextField(null=False, blank=True)
     price = models.DecimalField(default=0, max_digits=8, decimal_places=2)
