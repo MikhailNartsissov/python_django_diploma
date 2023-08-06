@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "python-django-diploma"
+version = "0.1.0"
+description = "Diploma at Mikhail Nartsissov's Django course"
+authors = ["Mikhail Nartsissov <nartsissov_ma@mail.ru>"]
+readme = "README.md"
+packages = [{include = "python_django_diploma"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^4.2.4"
+djangorestframework = "^3.14.0"
+pillow = "^10.0.0"
+django-filter = "^23.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
