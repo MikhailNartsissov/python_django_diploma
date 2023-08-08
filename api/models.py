@@ -61,3 +61,10 @@ class Review(models.Model):
     text = models.TextField(null=False, blank=False, max_length=300)
     date = models.DateTimeField(auto_now_add=True)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
+
+
+class ProductSale(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    salePrice = models.DecimalField(default=0, max_digits=8, decimal_places=2)
+    dateFrom = models.DateTimeField()
+    dateTo = models.DateTimeField()

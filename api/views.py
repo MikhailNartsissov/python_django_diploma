@@ -5,8 +5,8 @@ from rest_framework.views import APIView
 from rest_framework.request import Request
 from rest_framework.response import Response
 from .pagination import CustomPagination
-from .models import Product, Category
-from .serializers import CategorySerializer, CatalogSerializer
+from .models import Product, Category, ProductSale
+from .serializers import CategorySerializer, CatalogSerializer, PopularProductsSerializer, SaleProductSerializer
 
 
 class CategoriesListView(APIView):
@@ -42,3 +42,29 @@ class CatalogViewSet(ModelViewSet):
         "title",
         "price",
     ]
+
+
+class PopularProductsListView(ListAPIView):
+    queryset = Product.objects.filter(title="Qualcomm DragonBoard 410C").prefetch_related()
+    filterset_fields = ["title", "price"]
+    serializer_class = PopularProductsSerializer
+
+
+class LimitedProductsListView(ListAPIView):
+    queryset = Product.objects.filter(title="Raspberry Pi 3 Model B").prefetch_related()
+    filterset_fields = ["title", "price"]
+    serializer_class = PopularProductsSerializer
+
+
+class SaleProductsListView(ListAPIView):
+    queryset = ProductSale.objects.all().prefetch_related()
+    pagination_class = CustomPagination
+    serializer_class = SaleProductSerializer
+    ordering = ['product__title']
+
+
+# class SaleProductsViewSet(ModelViewSet):
+#     queryset = ProductSale.objects.all().prefetch_related()
+#     pagination_class = CustomPagination
+#     serializer_class = SaleProductSerializer
+#     ordering = ['product__title']
