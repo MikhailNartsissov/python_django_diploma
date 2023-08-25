@@ -1,4 +1,18 @@
-from .models import Product, Category, Subcategory, ProductImage, Tag, Review, ProductSale
+from django.http import HttpResponseRedirect
+
+from .models import (
+    Product,
+    Category,
+    Subcategory,
+    ProductImage,
+    Tag,
+    Review,
+    ProductSale,
+    ProductSpecifications,
+    Basket,
+)
+
+from django.contrib.auth.models import User
 
 from rest_framework import serializers
 from django.db.models import Avg
@@ -85,6 +99,74 @@ class CatalogSerializer(serializers.ModelSerializer):
         return obj.review_set.aggregate(Avg('rate'))["rate__avg"]
 
 
+class ReviewSerializer(serializers.ModelSerializer):
+    email = serializers.SerializerMethodField()
+    author = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Review
+        fields = [
+            "author",
+            "email",
+            "text",
+            "rate",
+            "date",
+        ]
+
+    def get_email(self, obj):
+        return obj.author.email
+
+    def get_author(self, obj):
+        return obj.author.username
+
+
+class ProductSpecificationsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ProductSpecifications
+        fields = [
+            'name',
+            'value',
+        ]
+
+
+class CatalogItemSerializer(serializers.ModelSerializer):
+    fullDescription = serializers.SerializerMethodField()
+    description = serializers.SerializerMethodField()
+    images = ProductImageSerializer(many=True, read_only=True, source='productimage_set')
+    reviews = ReviewSerializer(many=True, read_only=True, source='review_set')
+    tags = TagSerializer(many=True, read_only=True)
+    specifications = ProductSpecificationsSerializer(many=True, read_only=True, source='productspecifications_set')
+    rating = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Product
+        fields = [
+            'id',
+            'category',
+            'price',
+            'count',
+            'date',
+            'title',
+            'description',
+            'fullDescription',
+            'freeDelivery',
+            'images',
+            'tags',
+            'reviews',
+            'specifications',
+            'rating',
+        ]
+
+    def get_description(self, obj):
+        return obj.description[:100]
+
+    def get_fullDescription(self, obj):
+        return obj.description
+
+    def get_rating(self, obj):
+        return obj.review_set.aggregate(Avg('rate'))["rate__avg"]
+
+
 class PopularProductsSerializer(serializers.ModelSerializer):
     images = ProductImageSerializer(many=True, read_only=True, source='productimage_set')
     reviews = serializers.SerializerMethodField()
@@ -94,6 +176,7 @@ class PopularProductsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
         fields = [
+            'id',
             'category',
             'price',
             'count',
@@ -125,6 +208,7 @@ class SaleProductImageSerializer(serializers.ModelSerializer):
 class SaleProductSerializer(serializers.ModelSerializer):
     price = serializers.SerializerMethodField()
     title = serializers.SerializerMethodField()
+
     images = SaleProductImageSerializer(many=True, read_only=True)
 
     class Meta:
@@ -148,5 +232,45 @@ class SaleProductSerializer(serializers.ModelSerializer):
     def to_representation(self, instance):
         response = super().to_representation(instance)
         product = instance.product
+        response["dateFrom"] = instance.dateFrom.strftime("%d/%m")
+        response["dateTo"] = instance.dateTo.strftime("%d/%m")
         response['images'] = SaleProductImageSerializer(product).data['images']
+        return response
+
+
+class UserSerializer(serializers.ModelSerializer):
+    phone = serializers.SerializerMethodField()
+
+    class Meta:
+        model = User
+        fields = [
+            'username',
+            'email',
+            'phone',
+        ]
+
+    def get_phone(self, obj):
+        return "9151358871"
+
+    def get_fullName(self, obj):
+        if obj.first_name or obj.last_name:
+            return obj.first_name + " " + obj.last_name
+        else:
+            return obj.username
+
+
+class BasketSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Basket
+        fields = [
+            'user',
+            'date',
+            'product',
+            'count',
+        ]
+
+    def to_representation(self, instance):
+        response = CatalogSerializer(instance.product).data
+        response['count'] = instance.count
         return response

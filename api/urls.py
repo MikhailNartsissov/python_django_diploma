@@ -8,22 +8,26 @@ from .views import (
     PopularProductsListView,
     LimitedProductsListView,
     SaleProductsListView,
-    CatalogViewSet,
-    # SaleProductsViewSet,
+    BannerListView,
+    CatalogItemViewSet,
+    ReviewCreateView,
+    BasketViewSet,
 )
 
 app_name = "api"
 
-routers = DefaultRouter()
-routers.register(r'^catalog', CatalogViewSet, basename="catalog")
-# routers.register(r'^sales', SaleProductsViewSet, basename="sales")
+routers = DefaultRouter(trailing_slash=False)
+routers.register(r'product', CatalogItemViewSet, basename="product")
+routers.register(r'basket', BasketViewSet, basename="basket")
 
 urlpatterns = [
     path("", include(routers.urls)),
+    path("catalog/", CatalogListView.as_view(), name="catalog"),
+    path("product/<int:id>/reviews", ReviewCreateView.as_view(), name="review_create"),
     path("categories/", CategoriesListView.as_view(), name="categories"),
     path("catalog", CatalogListView.as_view(), name="catalog"),
     path("products/popular/", PopularProductsListView.as_view(), name="popular"),
     path("products/limited/", LimitedProductsListView.as_view(), name="limited"),
-    # path("sale/", SaleProductsListView.as_view(), name="sale"),
     path("sales", SaleProductsListView.as_view(), name="sales"),
+    path("banners/", BannerListView.as_view(), name="banners"),
 ]
