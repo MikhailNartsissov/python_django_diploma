@@ -1,5 +1,3 @@
-from django.http import HttpResponseRedirect
-
 from .models import (
     Product,
     Category,
