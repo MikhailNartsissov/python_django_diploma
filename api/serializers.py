@@ -8,12 +8,15 @@ from .models import (
     ProductSale,
     ProductSpecifications,
     Basket,
+    Profile,
+    Order,
+    OrderItem,
 )
 
 from django.contrib.auth.models import User
 
 from rest_framework import serializers
-from django.db.models import Avg
+from django.db.models import Avg, Sum, F
 
 
 class CategoryImageSerializer(serializers.ModelSerializer):
@@ -258,7 +261,6 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class BasketSerializer(serializers.ModelSerializer):
-
     class Meta:
         model = Basket
         fields = [
@@ -272,3 +274,52 @@ class BasketSerializer(serializers.ModelSerializer):
         response = CatalogSerializer(instance.product).data
         response['count'] = instance.count
         return response
+
+
+class OrderSerializer(serializers.ModelSerializer):
+    totalCost = serializers.SerializerMethodField()
+    products = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Order
+        fields = [
+            'id',
+            'createdAt',
+            'fullName',
+            'email',
+            'phone',
+            'deliveryType',
+            'paymentType',
+            'totalCost',
+            'city',
+            'address',
+            'products',
+        ]
+
+    def get_totalCost(self, obj):
+        total_cost = 0
+        for item in Basket.objects.filter(user=self.context['request'].user):
+            total_cost += item.product.price * item.count
+        return total_cost
+
+    def get_products(self, obj):
+        result = []
+        for product in Basket.objects.filter(user=self.context['request'].user):
+            result.append(BasketSerializer(product).data)
+        return result
+
+
+class OrdersSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Order
+        fields = [
+            'id',
+            'user',
+            'fullName'
+        ]
+
+    def to_representation(self, instance):
+        result = dict()
+        result["orderId"] = instance.id
+        result["fullName"] = instance.fullName
+        return result

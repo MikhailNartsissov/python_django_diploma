@@ -1,4 +1,5 @@
 from django.db.models import Count, Avg
+from django.contrib.auth.models import User
 
 from rest_framework.generics import ListAPIView, CreateAPIView
 from rest_framework.viewsets import ModelViewSet
@@ -14,6 +15,9 @@ from .models import (
     Category,
     ProductSale,
     Basket,
+    Profile,
+    Order,
+    OrderItem,
 )
 
 from .serializers import (
@@ -24,6 +28,8 @@ from .serializers import (
     CatalogItemSerializer,
     ReviewSerializer,
     BasketSerializer,
+    OrderSerializer,
+    OrdersSerializer,
 )
 
 
@@ -159,7 +165,7 @@ class BasketViewSet(ModelViewSet):
     @action(methods=['delete'], detail=False)
     def delete(self, request):
         count = request.data['count']
-        instance = Basket.objects.filter(user=request.user.id, product=request.data['id'])
+        instance = Basket.objects.filter(user=request.user, product=request.data['id'])
         if instance:
             instance = instance[0]
         if instance.count > count:
@@ -177,3 +183,47 @@ class BasketViewSet(ModelViewSet):
 
     def perform_destroy(self, instance):
         instance.delete()
+
+
+class OrdersViewSet(ModelViewSet):
+    serializer_class = OrdersSerializer
+
+    def get_queryset(self):
+        queryset = Order.objects.filter(user=self.request.user)
+        return queryset
+
+    def create(self, request, *args, **kwargs):
+        data = dict()
+        data['user'] = request.user.pk
+        if request.user.first_name or request.user.last_name:
+            data['fullName'] = request.user.first_name + " " + request.user.last_name
+        else:
+            data['fullName'] = request.user.username
+        serializer = self.get_serializer(data=data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+
+class OrderViewSet(ModelViewSet):
+    serializer_class = OrderSerializer
+
+    def get_queryset(self):
+        queryset = Order.objects.filter(user=self.request.user)
+        return queryset
+
+    def post(self, request, *args, **kwargs):
+        data = request.data
+        data['id'] = data['orderId']
+        del data['orderId']
+        data['totalCost'] = request.data['basketCount']['price']
+        serializer = self.get_serializer(data=data)
+        for product in request.data["basket"].keys():
+            OrderItem.objects.create(
+                order=Order.objects.get(id=data['id']),
+                product=Product.objects.get(id=product),
+                count=request.data['basket'][product]['count']
+            )
+        serializer.is_valid(raise_exception=True)
+        serializer.update(Order.objects.get(id=data['id']), data)
+        return Response(self.get_serializer(Order.objects.get(id=data['id'])).data)

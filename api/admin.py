@@ -9,6 +9,9 @@ from .models import (
     Subcategory,
     ProductSpecifications,
     Basket,
+    Profile,
+    Order,
+    OrderItem,
 )
 
 
@@ -21,3 +24,6 @@ admin.site.register(Category)
 admin.site.register(Subcategory)
 admin.site.register(ProductSpecifications)
 admin.site.register(Basket)
+admin.site.register(Profile)
+admin.site.register(Order)
+admin.site.register(OrderItem)

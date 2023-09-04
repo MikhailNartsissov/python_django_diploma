@@ -85,3 +85,42 @@ class Basket(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='product_id')
     count = models.DecimalField(max_digits=6, decimal_places=0)
+
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    fullName = models.CharField(max_length=80, null=False, blank=False)
+    email = models.EmailField(blank=False, null=False)
+    phone = models.PositiveSmallIntegerField(null=False, blank=False)
+
+
+class Order(models.Model):
+    createdAt = models.DateTimeField(auto_now_add=True)
+    paymentType = models.CharField(max_length=30, default='online')
+    deliveryType = models.CharField(max_length=30, default='ordinary')
+    status = models.CharField(max_length=30, default='accepted')
+    city = models.CharField(max_length=100)
+    address = models.TextField(max_length=200)
+    fullName = models.CharField(max_length=80)
+    email = models.EmailField()
+    phone = models.PositiveSmallIntegerField(default=0000000)
+    user = models.ForeignKey(User, on_delete=models.PROTECT)
+
+
+class OrderItem(models.Model):
+    order = models.ForeignKey(Order, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    count = models.DecimalField(max_digits=6, decimal_places=0)
+
+
+# class Payment(models.Model):
+#     user = models.ForeignKey(User, on_delete=models.PROTECT)
+#     ONLINE = 1
+#     ONLINE_RANDOM = 2
+#
+#     PAYMENT_CHOICES = (
+#         (ONLINE, 1),
+#         (ONLINE_RANDOM, 2),
+#     )
+#     name = models.CharField(max_length=200)
+#     level = models.CharField(max_length=2, choices=LEVEL_CHOICES, default=JUNIOR)

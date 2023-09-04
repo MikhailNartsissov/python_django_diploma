@@ -12,6 +12,8 @@ from .views import (
     CatalogItemViewSet,
     ReviewCreateView,
     BasketViewSet,
+    OrderViewSet,
+    OrdersViewSet,
 )
 
 app_name = "api"
@@ -19,6 +21,8 @@ app_name = "api"
 routers = DefaultRouter(trailing_slash=False)
 routers.register(r'product', CatalogItemViewSet, basename="product")
 routers.register(r'basket', BasketViewSet, basename="basket")
+routers.register(r'orders', OrdersViewSet, basename="orders")
+routers.register(r'order', OrderViewSet, basename="order")
 
 urlpatterns = [
     path("", include(routers.urls)),
