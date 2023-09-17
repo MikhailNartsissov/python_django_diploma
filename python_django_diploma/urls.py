@@ -29,6 +29,7 @@ urlpatterns = [
     path('catalog', TemplateView.as_view(template_name="frontend/catalog.html")),
     path('sale', TemplateView.as_view(template_name="frontend/sale.html")),
     path('sign-up', TemplateView.as_view(template_name="frontend/signUp.html")),
+    path('orders/undefined/', TemplateView.as_view(template_name="frontend/signIn.html")),
     path('', include('frontend.urls')),
     path('api/', include('api.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -21,6 +21,7 @@ from .views import (
     LoginView,
     CreateUserView,
     PasswordChangeView,
+    TagListView,
 )
 
 app_name = "api"
@@ -34,6 +35,7 @@ routers.register(r'order', OrderViewSet, basename="order")
 urlpatterns = [
     path("", include(routers.urls)),
     path("catalog", CatalogListView.as_view(), name="catalog"),
+    path("tags", TagListView.as_view(), name="tags"),
     path("profile", ProfileListCreateView.as_view(), name="profile"),
     path("profile/avatar", AvatarListCreateView.as_view(), name="avatar"),
     path("product/<int:id>/reviews", ReviewCreateView.as_view(), name="review_create"),
