@@ -12,6 +12,9 @@ from .models import (
     Profile,
     Order,
     OrderItem,
+    Payment,
+    ProfileImage,
+    TemporaryBasket,
 )
 
 
@@ -25,5 +28,8 @@ admin.site.register(Subcategory)
 admin.site.register(ProductSpecifications)
 admin.site.register(Basket)
 admin.site.register(Profile)
+admin.site.register(ProfileImage)
 admin.site.register(Order)
 admin.site.register(OrderItem)
+admin.site.register(Payment)
+admin.site.register(TemporaryBasket)

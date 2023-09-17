@@ -14,6 +14,8 @@ from pathlib import Path
 
 import api.pagination
 
+APPEND_SLASH = True
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -60,6 +62,7 @@ MIDDLEWARE = [
     'request_logging.middleware.LoggingMiddleware',
 ]
 
+
 ROOT_URLCONF = 'python_django_diploma.urls'
 
 TEMPLATES = [
@@ -88,6 +91,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+        'OPTIONS': {
+            'timeout': 20,
+        }
     }
 }
 
@@ -138,6 +144,12 @@ REST_FRAMEWORK = {
     "PAGE_SIZE": 1,
     'DEFAULT_FILTER_BACKENDS': [
         "django_filters.rest_framework.DjangoFilterBackend"
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
     ],
 }
 

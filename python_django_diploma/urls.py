@@ -18,10 +18,17 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-
+from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('profile', TemplateView.as_view(template_name="frontend/profile.html")),
+    path('history-order', TemplateView.as_view(template_name="frontend/historyorder.html")),
+    path('sign-in', TemplateView.as_view(template_name="frontend/signIn.html")),
+    path('accounts/login/', TemplateView.as_view(template_name="frontend/signIn.html")),
+    path('catalog', TemplateView.as_view(template_name="frontend/catalog.html")),
+    path('sale', TemplateView.as_view(template_name="frontend/sale.html")),
+    path('sign-up', TemplateView.as_view(template_name="frontend/signUp.html")),
     path('', include('frontend.urls')),
     path('api/', include('api.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
