@@ -201,7 +201,7 @@ class Order(models.Model):
     createdAt = models.DateTimeField(auto_now_add=True)
     paymentType = models.CharField(max_length=30, default='online')
     deliveryType = models.CharField(max_length=30, default='ordinary')
-    status = models.CharField(max_length=30, default='accepted')
+    status = models.CharField(max_length=90, default='accepted')
     city = models.CharField(max_length=100, default="Enter city of the delivery")
     address = models.TextField(max_length=200, default="Enter address of the delivery")
     fullName = models.CharField(max_length=80)

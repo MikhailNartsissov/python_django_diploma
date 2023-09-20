@@ -399,8 +399,8 @@ class SaleProductSerializer(serializers.ModelSerializer):
         """
         response = super().to_representation(instance)
         product = instance.product
-        response["dateFrom"] = instance.dateFrom.strftime("%d/%m")
-        response["dateTo"] = instance.dateTo.strftime("%d/%m")
+        response["dateFrom"] = instance.dateFrom.strftime("%d-%m")
+        response["dateTo"] = instance.dateTo.strftime("%d-%m")
         response['images'] = SaleProductImageSerializer(product).data['images']
         return response
 
@@ -458,57 +458,7 @@ class TemporaryBasketSerializer(serializers.ModelSerializer):
 
 class OrderSerializer(serializers.ModelSerializer):
     """
-    Serializer for specific user's Order creation and representation.
-    It takes part in initial steps of the order creation (before specifying user, delivery and payment data).
-    Then another serializer named "OrdersSerializer" used.
-    Differs from OrdersSerializer by fields set and output data.
-    """
-
-    totalCost = serializers.DecimalField(max_digits=10, decimal_places=2, required=False, rounding='ROUND_HALF_EVEN')
-    products = serializers.SerializerMethodField()
-
-    class Meta:
-        model = Order
-        fields = [
-            'id',
-            'createdAt',
-            'fullName',
-            'email',
-            'phone',
-            'deliveryType',
-            'paymentType',
-            'totalCost',
-            'city',
-            'address',
-            'products',
-        ]
-
-    def get_products(self, obj):
-        """
-        Method returns a list of products in user's basket or order
-        First it checks, if any products are in the basket or no. If they are,
-        method adds them into list. If not, it uses OrderItems instead.
-        :param obj:
-        :return:
-        """
-        result = []
-        basket = Basket.objects.filter(user=self.context['request'].user)
-        if basket:
-            for product in basket:
-                result.append(BasketSerializer(product).data)
-        else:
-            order_items = OrderItem.objects.filter(order=obj.id)
-            for item in order_items:
-                result.append(BasketSerializer(item).data)
-        return result
-
-
-class OrdersSerializer(serializers.ModelSerializer):
-    """
     Serializer for Orders creation and representation.
-    It takes part in the steps of the order creation after specifying user, delivery and payment data.
-    Before it another serializer named "OrderSerializer" used.
-    Differs from OrderSerializer by fields set and output data.
     """
     totalCost = serializers.SerializerMethodField()
     products = serializers.SerializerMethodField()
@@ -532,17 +482,6 @@ class OrdersSerializer(serializers.ModelSerializer):
             'products',
         ]
 
-    def get_products(self, obj):
-        """
-        Method returns a list of products in user's order
-        :param obj:
-        :return:
-        """
-        result = []
-        for item in OrderItem.objects.filter(order=obj.id):
-            result.append(CatalogSerializer(item.product).data)
-        return result
-
     def get_totalCost(self, obj):
         """
         Method returns total cost of the order. First it checks whether the product on sale. If so, the method
@@ -550,6 +489,7 @@ class OrdersSerializer(serializers.ModelSerializer):
         :param obj:
         :return:
         """
+
         result = 0
         for item in OrderItem.objects.filter(order=obj.id):
             sale = ProductSale.objects.filter(product=item.product)
@@ -568,15 +508,23 @@ class OrdersSerializer(serializers.ModelSerializer):
         """
         return obj.createdAt.strftime("%d/%m/%y %H:%M:%S")
 
-    def to_representation(self, instance):
+    def get_products(self, obj):
         """
-        Modified "to_representation" method.
-        Added "orderId" data to fit swagger requirements
-        :param instance:
+        Method returns a list of products in user's basket or order
+        First it checks, if any products are in the basket or no. If they are,
+        method adds them into list. If not, it uses OrderItems instead.
+        :param obj:
         :return:
         """
-        result = super().to_representation(instance=instance)
-        result["orderId"] = instance.id
+        result = []
+        basket = Basket.objects.filter(user=self.context['request'].user)
+        if basket:
+            for product in basket:
+                result.append(BasketSerializer(product).data)
+        else:
+            order_items = OrderItem.objects.filter(order=obj.id)
+            for item in order_items:
+                result.append(BasketSerializer(item).data)
         return result
 
 

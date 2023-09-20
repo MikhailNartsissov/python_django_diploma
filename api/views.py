@@ -1,8 +1,9 @@
+from itertools import chain
+
 from django.contrib.auth.models import User
 from django.contrib.sessions.backends.db import SessionStore
 from django.db.models import Count, Avg
 from django.contrib.auth import logout, login
-
 
 from rest_framework.generics import ListAPIView, CreateAPIView, ListCreateAPIView, UpdateAPIView
 from rest_framework.permissions import AllowAny
@@ -44,7 +45,6 @@ from .serializers import (
     ReviewSerializer,
     BasketSerializer,
     OrderSerializer,
-    OrdersSerializer,
     PaymentSerializer,
     ProfileSerializer,
     AvatarSerializer,
@@ -59,6 +59,7 @@ class CategoriesListView(APIView):
     """
     View for categories
     """
+
     def get(self, request: Request) -> Response:
         categories = Category.objects.all().prefetch_related()
         serialized = CategorySerializer(categories, many=True)
@@ -207,8 +208,27 @@ class BannerListView(ListAPIView):
     """
     View for banners (manually specified product ids in queryset)
     """
-    queryset = Product.objects.filter(id__in=[6, 9, 13]).prefetch_related()
     serializer_class = PopularProductsSerializer
+
+    def get_queryset(self):
+        """
+        Modified method "get_queryset" gets available subcategories and counts amount of products in each subcategory,
+        then selects first three subcategories with the most amount of products in them and returns one product from
+        each selected category in resulting queryset.
+        :return:
+        """
+
+        categories_available = Subcategory.objects.all()
+        products_in_categories = list()
+        for category in categories_available:
+            key = category.id
+            value = Product.objects.filter(category=category).count()
+            products_in_categories.append((key, value))
+        products_in_categories.sort(key=lambda a: a[1], reverse=True)
+        categories_list = [item[0] for item in products_in_categories[:3]]
+        queryset = list(chain(Product.objects.filter(category=category).prefetch_related().first()
+                              for category in categories_list))
+        return queryset
 
 
 class BasketViewSet(ModelViewSet):
@@ -256,7 +276,7 @@ class BasketViewSet(ModelViewSet):
         data = dict()
         data['user'] = request.user.id
         data['product'] = request.data['id']
-        data['count'] = request.data['count']
+        data['count'] = int(request.data['count'])
         partial = False
         if request.user.is_authenticated:
             instance = Basket.objects.filter(user=request.user.id, product=request.data['id'])
@@ -279,7 +299,7 @@ class BasketViewSet(ModelViewSet):
         serializer.is_valid(raise_exception=True)
         serializer.save()
         headers = self.get_success_headers(serializer.data)
-        return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
+        return Response([serializer.data], status=status.HTTP_201_CREATED, headers=headers)
 
     @action(methods=['delete'], detail=False)
     def delete(self, request):
@@ -292,6 +312,7 @@ class BasketViewSet(ModelViewSet):
         :return:
         """
         count = request.data['count']
+        print(request.data)
         if request.user.is_authenticated:
             instance = Basket.objects.filter(user=request.user, product=request.data['id'])
         else:
@@ -310,7 +331,7 @@ class BasketViewSet(ModelViewSet):
             serializer.is_valid(raise_exception=True)
             serializer.save()
             headers = self.get_success_headers(serializer.data)
-            return Response(serializer.data, status=status.HTTP_200_OK, headers=headers)
+            return Response([serializer.data], status=status.HTTP_200_OK, headers=headers)
         self.perform_destroy(instance)
         return Response(status=status.HTTP_204_NO_CONTENT)
 
@@ -323,17 +344,48 @@ class BasketViewSet(ModelViewSet):
         instance.delete()
 
 
-class OrdersViewSet(LoginRequiredMixin, ModelViewSet):
+class OrderViewSet(LoginRequiredMixin, ModelViewSet):
     """
     ViewSet for Orders creation and representation.
     It takes part in the steps of the order creation after specifying user, delivery and payment data.
     Before it another ViewSet named "OrderViewSet" used.
     """
-    serializer_class = OrdersSerializer
+    serializer_class = OrderSerializer
 
     def get_queryset(self):
         queryset = Order.objects.filter(user=self.request.user)
         return queryset
+
+    def post(self, request, *args, **kwargs):
+        """
+        Modified method "post" checks if order pk is specified and, if it is, modifies the order.
+        If not, it calls create method with the request as a parameter.
+        :param request:
+        :param args:
+        :param kwargs:
+        :return:
+        """
+        data = request.data
+        data['user'] = request.user.pk
+        # Check if pk of the order was specified
+        if kwargs.get("pk"):
+            # If it was:
+            data['totalCost'] = round(data['basketCount']['price'], 2)
+            order = Order.objects.get(id=kwargs["pk"])
+            serializer = self.get_serializer(order, data=data)
+            serializer.is_valid(raise_exception=True)
+            serializer.save()
+            for product_id in request.data.get("basket").keys():
+                if not OrderItem.objects.filter(order=order, product=product_id):
+                    OrderItem.objects.create(
+                        order=order,
+                        product=Product.objects.get(id=product_id),
+                        count=request.data['basket'][product_id]['count']
+                    )
+            return Response({"orderId": serializer.data["id"]}, status=status.HTTP_200_OK)
+        else:
+            # If it was not
+            return self.create(request)
 
     def create(self, request, *args, **kwargs):
         """
@@ -345,65 +397,33 @@ class OrdersViewSet(LoginRequiredMixin, ModelViewSet):
         :return:
         """
         data = dict()
-        data['user'] = request.user.pk
+        user = request.user
+        data['user'] = user.pk
+        profile = Profile.objects.filter(user=user).values_list("email", "phone", "fullName")
+        if profile:
+            profile = profile[0]
+            data["email"] = profile[0]
+            data["phone"] = profile[1]
+            data["fullName"] = profile[2]
+        else:
+            if request.user.first_name or request.user.last_name:
+                # fullName construction
+                data['fullName'] = request.user.first_name + " " + request.user.last_name
+            else:
+                data['fullName'] = request.user.username
         order = Order.objects.filter(
             user=request.user,
             status="accepted",
             city="Enter city of the delivery",
             address="Enter address of the delivery",
-            email="user@domain.com",
-            phone=0
         ).last()
-        if request.user.first_name or request.user.last_name:
-            # fullName construction
-            data['fullName'] = request.user.first_name + " " + request.user.last_name
-        else:
-            data['fullName'] = request.user.username
         if order:
             serializer = self.get_serializer(order, data=data)
         else:
             serializer = self.get_serializer(data=data)
         serializer.is_valid(raise_exception=True)
         serializer.save()
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
-
-
-class OrderViewSet(ModelViewSet):
-    """
-    ViewSet for specific user's Order creation and representation.
-    It takes part in initial steps of the order creation (before specifying user, delivery and payment data).
-    Then another ViewSet named "OrdersViewSet" used.
-    """
-    serializer_class = OrderSerializer
-
-    def get_queryset(self):
-        queryset = Order.objects.filter(user=self.request.user)
-        return queryset
-
-    def post(self, request, *args, **kwargs):
-        """
-        Modified method "post" creates a new order. It checks if the products from the basket
-        are already in order and if not, adds them. It's necessary to be able to pay previously
-        created orders correctly.
-        :param request:
-        :param args:
-        :param kwargs:
-        :return:
-        """
-        data = request.data
-        data['totalCost'] = round(request.data['basketCount']['price'], 2)
-        order = Order.objects.get(id=data['orderId'])
-        serializer = self.get_serializer(order, data=data)
-        serializer.is_valid(raise_exception=True)
-        serializer.save()
-        for product_id in request.data["basket"].keys():
-            if not OrderItem.objects.filter(order=order, product=product_id):
-                OrderItem.objects.create(
-                    order=order,
-                    product=Product.objects.get(id=product_id),
-                    count=request.data['basket'][product_id]['count']
-                )
-        return Response(OrdersSerializer(order).data)
+        return Response({"orderId": serializer.data["id"]}, status=status.HTTP_201_CREATED)
 
 
 class PaymentCreateView(CreateAPIView):

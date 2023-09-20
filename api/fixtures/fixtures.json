@@ -1,0 +1,3768 @@
+[
+  {
+    "model": "api.category",
+    "pk": "1",
+    "fields": {
+      "title": "Computers",
+      "src": "api/categories/1-Computers.png",
+      "alt": "There should be an image of the category"
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": "2",
+    "fields": {
+      "title": "Audio",
+      "src": "api/categories/2-Audio.png",
+      "alt": "There should be an image of the category"
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": "3",
+    "fields": {
+      "title": "Mobile",
+      "src": "api/categories/3-Mobile.png",
+      "alt": "There should be an image of the category"
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": "4",
+    "fields": {
+      "title": "Home equipment",
+      "src": "api/categories/4-Home.png",
+      "alt": "There should be an image of the category"
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": "5",
+    "fields": {
+      "title": "Home accessoires",
+      "src": "api/categories/5-Home_accessoires.png",
+      "alt": "There should be an image of the category"
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": "6",
+    "fields": {
+      "title": "Kitchen equipment",
+      "src": "api/categories/6-Kitchen.png",
+      "alt": "There should be an image of the category"
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": "7",
+    "fields": {
+      "title": "Photo and accessoires",
+      "src": "api/categories/7-Photo.png",
+      "alt": "There should be an image of the category"
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": "8",
+    "fields": {
+      "title": "Accessoires for auto",
+      "src": "api/categories/8-Auto.png",
+      "alt": "There should be an image of the category"
+    }
+  },
+  {
+    "model": "api.subcategory",
+    "pk": "1001",
+    "fields": {
+      "category": "1",
+      "title": "PC, Notebooks, Singleboards",
+      "src": "api/categories/1001-Computers.png",
+      "alt": "There should be an image of the category"
+    }
+  },
+  {
+    "model": "api.subcategory",
+    "pk": "1002",
+    "fields": {
+      "category": "1",
+      "title": "Peripherals",
+      "src": "api/categories/1002-Peripherals.png",
+      "alt": "There should be an image of the category"
+    }
+  },
+  {
+    "model": "api.subcategory",
+    "pk": "1003",
+    "fields": {
+      "category": "1",
+      "title": "Accessoires",
+      "src": "api/categories/1003-Accessoires.png",
+      "alt": "There should be an image of the category"
+    }
+  },
+  {
+    "model": "api.subcategory",
+    "pk": "2001",
+    "fields": {
+      "category": "2",
+      "title": "Headphones, Speakers",
+      "src": "api/categories/2001-Headphones.png",
+      "alt": "There should be an image of the category"
+    }
+  },
+  {
+    "model": "api.subcategory",
+    "pk": "2002",
+    "fields": {
+      "category": "2",
+      "title": "Amplifiers, Receivers",
+      "src": "api/categories/2002-Amplifiers.png",
+      "alt": "There should be an image of the category"
+    }
+  },
+  {
+    "model": "api.subcategory",
+    "pk": "2003",
+    "fields": {
+      "category": "2",
+      "title": "Players, Vinyl",
+      "src": "api/categories/2003-Vinyl.png",
+      "alt": "There should be an image of the category"
+    }
+  },
+  {
+    "model": "api.subcategory",
+    "pk": "3001",
+    "fields": {
+      "category": "3",
+      "title": "Mobile phones",
+      "src": "api/categories/3001-Mobilephones_jyqISGX.png",
+      "alt": "There should be an image of the subcategory"
+    }
+  },
+  {
+    "model": "api.subcategory",
+    "pk": "3002",
+    "fields": {
+      "category": "3",
+      "title": "Smartphones",
+      "src": "api/categories/3002-Smartphones.png",
+      "alt": "There should be an image of the subcategory"
+    }
+  },
+  {
+    "model": "api.subcategory",
+    "pk": "4001",
+    "fields": {
+      "category": "4",
+      "title": "Washers",
+      "src": "api/categories/4001-Washers.png",
+      "alt": "There should be an image of the subcategory"
+    }
+  },
+  {
+    "model": "api.subcategory",
+    "pk": "4002",
+    "fields": {
+      "category": "4",
+      "title": "Vacuum cleaners",
+      "src": "api/categories/4002-Vacuumcleaners.png",
+      "alt": "There should be an image of the subcategory"
+    }
+  },
+  {
+    "model": "api.subcategory",
+    "pk": "4003",
+    "fields": {
+      "category": "4",
+      "title": "Air conditioners",
+      "src": "api/categories/4003-Conditioners.png",
+      "alt": "There should be an image of the subcategory"
+    }
+  },
+  {
+    "model": "api.subcategory",
+    "pk": "5001",
+    "fields": {
+      "category": "5",
+      "title": "Dish sets",
+      "src": "api/categories/5001-dishsets.png",
+      "alt": "There should be an image of the subcategory"
+    }
+  },
+  {
+    "model": "api.subcategory",
+    "pk": "6001",
+    "fields": {
+      "category": "6",
+      "title": "Microvawe ovens",
+      "src": "api/categories/6001-Microvawe.png",
+      "alt": "There should be an image of the subcategory"
+    }
+  },
+  {
+    "model": "api.subcategory",
+    "pk": "7001",
+    "fields": {
+      "category": "7",
+      "title": "Photo cameras",
+      "src": "api/categories/7001-Cameras.png",
+      "alt": "There should be an image of the subcategory"
+    }
+  },
+  {
+    "model": "api.subcategory",
+    "pk": "8001",
+    "fields": {
+      "category": "8",
+      "title": "Tyres",
+      "src": "api/categories/8001-Tyres.png",
+      "alt": "There should be an image of the subcategory"
+    }
+  },
+  {
+    "model": "api.tag",
+    "pk": 1,
+    "fields": {
+      "name": "singleboard",
+      "category": [
+        "1001"
+      ]
+    }
+  },
+  {
+    "model": "api.tag",
+    "pk": 2,
+    "fields": {
+      "name": "IoT",
+      "category": [
+        "1001",
+        "1002",
+        "1003"
+      ]
+    }
+  },
+  {
+    "model": "api.tag",
+    "pk": 3,
+    "fields": {
+      "name": "Printer",
+      "category": [
+        "1002"
+      ]
+    }
+  },
+  {
+    "model": "api.tag",
+    "pk": 4,
+    "fields": {
+      "name": "Xerox",
+      "category": [
+        "1001",
+        "1002",
+        "1003"
+      ]
+    }
+  },
+  {
+    "model": "api.tag",
+    "pk": 5,
+    "fields": {
+      "name": "Motherboard",
+      "category": [
+        "1003"
+      ]
+    }
+  },
+  {
+    "model": "api.tag",
+    "pk": 6,
+    "fields": {
+      "name": "CPU Fan",
+      "category": [
+        "1003"
+      ]
+    }
+  },
+  {
+    "model": "api.tag",
+    "pk": 7,
+    "fields": {
+      "name": "Amplifiers",
+      "category": [
+        "2002"
+      ]
+    }
+  },
+  {
+    "model": "api.tag",
+    "pk": 8,
+    "fields": {
+      "name": "HiFi Audio",
+      "category": [
+        "2001",
+        "2002",
+        "2003"
+      ]
+    }
+  },
+  {
+    "model": "api.tag",
+    "pk": 9,
+    "fields": {
+      "name": "Headphones",
+      "category": [
+        "2001"
+      ]
+    }
+  },
+  {
+    "model": "api.tag",
+    "pk": 10,
+    "fields": {
+      "name": "Vinyl",
+      "category": [
+        "2003"
+      ]
+    }
+  },
+  {
+    "model": "api.tag",
+    "pk": 11,
+    "fields": {
+      "name": "mobile phones",
+      "category": [
+        "3001"
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 1,
+    "fields": {
+      "category": "1001",
+      "title": "Qualcomm DragonBoard 410C",
+      "description": "The DragonBoard 410c, a product of Arrow Electronics, is the development board based on the mid-tier Qualcomm® APQ8016E processor. It features advanced processing power, Wi-Fi, Bluetooth ® wireless technology connectivity, and GPS, all packed into a board the size of a credit card.",
+      "price": "132.81",
+      "count": "10",
+      "freeDelivery": false,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 2,
+    "fields": {
+      "category": "1001",
+      "title": "Raspberry Pi 3 Model B",
+      "description": "Raspberry Pi is the most recognizable name in the single board computer niche. Raspberry Pi boards are the most popular, having the largest following and the most active community. There is more software and project guides available for Raspberry Pi than for all the other SBCs combined. This makes it a great choice for practically anyone, but especially for people who want to set up a project as a hobby and for first-timers.",
+      "price": "35.71",
+      "count": "16",
+      "freeDelivery": false,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 3,
+    "fields": {
+      "category": "1001",
+      "title": "Rock64 (4GB)",
+      "description": "A Small Form-Factor Single Board Computer Capable of 4K playback\r\nROCK64 is a credit card sized Single Board Computer powered by Rockchip RK3328 quad-core ARM Cortex A53 64-Bit Processor and support up to 4GB 1600MHz LPDDR3 memory. It provides an eMMC module socket, MicroSD Card slot, Pi-2 bus, Pi-P5+ bus, USB 3.0 and many others peripheral devices interface for makers to integrate with sensors and devices.",
+      "price": "79.99",
+      "count": "10",
+      "freeDelivery": true,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 4,
+    "fields": {
+      "category": "1001",
+      "title": "Udoo x86 Ultra",
+      "description": "The Ultra is comparable in power to that of a typical budget PC. It can run most applications you would usually run on a PC on a daily basis, even some 3D games. It supports Linux, Android, and Windows 10. And it has an embedded Arduino 101 board with built-in gyroscope and six-axis accelerometer. The high power and customizability offered by the Arduino board make this SBC an extremely versatile tool for casual and power users alike.",
+      "price": "266.99",
+      "count": "0",
+      "freeDelivery": false,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": false,
+      "tags": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 5,
+    "fields": {
+      "category": "1002",
+      "title": "Xerox® C230 Colour Printer",
+      "description": "Print\r\nPrint speed\tColour: up to 22 ppm\r\nBlack: up to 22 ppm\r\nTwo-sided output\tStandard\r\nRecommended monthly print volume\tUp to 1,500 pages\r\nDuty cycle\tUp to 30,000 images/month ⓘ\r\nProcessor speed\t1.0 GHz\r\nPrint memory (standard)\t256 MB standard\r\nConnectivity\tEthernet 10/100 BaseTX, Hi Speed USB 2.0 (Type B), Wireless 802.11 b/g/n\r\nMaximum print resolution\t600 x 600 dpi, 4800 Color Quality\r\nFirst-page-out time, printing\tAs fast as 11 seconds (black and white)\r\nPrint features\tBooklet Layout, Collation, Draft Mode, Duplex, Earth Smart settings, N-up, Normal Job Type, One Touch UI, Orientation, Print Job ID in Margins, Rotate Image 180 degrees, Saved Settings, Tray and Toner status, Watermark\r\nMobile printing\tApple® AirPrint™, Chromebook™ Printing, Mopria™ Print Service, Wi-Fi Direct\r\nOS support\tMacOS 10.14, 10.15, 11, 12, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2019, Windows Server® 2008 SP2 (32 and 64 bit), Windows® 7 SP1, 8, 8.1 Update 1, 10, 11\r\nMedia Handling\r\nPaper capacity\tTray (Main tray): 250 sheets\r\nTray (Manual feed slot): 1 sheets\r\nPaper size\tTray (Main tray): Custom sizes: 100 x 148 mm to 216 x 340 mm\r\nTray (Manual feed slot): Custom sizes: 100 x 148 mm to 216 x 340 mm\r\nOutput capacity\t150 sheets\r\nMedia types\tPlain Paper, Light Paper, Heavy Paper, Card Stock, Labels (Paper Labels), Envelopes, Colored Paper, Letterhead, Preprinted, Bond, Glossy, Rough/Cotton, Recycled\r\nSecurity\r\nSecurity features\tSecurity Guide (PDF), Access Controls, Auto-insertion of Sender’s Email Address, Certificate Management, Confidential Print, Digitally Signed Firmware Updates, Fax/Network Separation, Login Restrictions, Non-Volatile Memory Wipe, Port Filtering, Protected USB Ports, Secure Password Reset, TCP Connection Filtering, TLS 1.3, WPA 3",
+      "price": "299.99",
+      "count": "5",
+      "freeDelivery": false,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 6,
+    "fields": {
+      "category": "1002",
+      "title": "Kyocera ECOSYS M2540dn",
+      "description": "General type\r\nMonochrome multifunctional for A4 format\r\nEngine speed\r\nUp to 40 pages A4 per minute\r\nWarm-up time\r\nApprox. 17 seconds or less\r\nPower consumption\r\nCopying/Printing: 661 W, Ready-mode: 21 W, Sleep-mode: 1 W\r\nWarranty\r\n1-year warranty (depending on the country) as standard. KYOCERA guarantees the drum and developer for 3 years or 100,000 pages (whichever occurs sooner), provided each device is used and cleaned in accordance with the service instructions.",
+      "price": "899.99",
+      "count": "3",
+      "freeDelivery": true,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 7,
+    "fields": {
+      "category": "1003",
+      "title": "X79 Motherboard Kit With Intel Xeon E5",
+      "description": "X79 Motherboard Kit With Intel Xeon E5 2640 V2 CPU 2PCS* 8GB= 16GB DDR3 1600MHz ECC REG RAM NVME M.2 SSD Slot 8 core 16 threads",
+      "price": "64.99",
+      "count": "15",
+      "freeDelivery": false,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 8,
+    "fields": {
+      "category": "1003",
+      "title": "6 heat-pipes RGB CPU Cooler",
+      "description": "6 heat-pipes RGB CPU Cooler radiator Cooling 3PIN 4PIN 2 Fan For LGA 1150 1155 1156 1366 2011 X79 X99 Motherboard",
+      "price": "29.99",
+      "count": "20",
+      "freeDelivery": true,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        6
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 9,
+    "fields": {
+      "category": "2002",
+      "title": "Denon PMA-900HNE",
+      "description": "BEAUTIFULLY ENGINEERED, THE PMA-900HNE FROM DENON IS A GREAT INTRO TO THE WORLD OF MUSIC STREAMING",
+      "price": "999.99",
+      "count": "2",
+      "freeDelivery": true,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": true,
+      "available": true,
+      "tags": [
+        7,
+        8
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 10,
+    "fields": {
+      "category": "2002",
+      "title": "Marantz PM-10",
+      "description": "For the PM-10, Marantz wanted the purest possible sound, plus the power and dynamics to drive and control some of the world's most demanding speakers. To achieve this, Marantz continued the balanced working found in the preamp stage right through to the power amplifier stage to its speaker outputs and adopted bridged working to develop the power required while maintaining that balanced design. This True Balanced Concept realizes a ground-free signal management from the input to the output.",
+      "price": "12999.99",
+      "count": "1",
+      "freeDelivery": true,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": true,
+      "available": true,
+      "tags": [
+        7,
+        8
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 11,
+    "fields": {
+      "category": "2001",
+      "title": "Denon AH-D7200",
+      "description": "The over-ear, closed back design is surprisingly light, despite having a sturdy, durable build. The wooden earcups come with extremely comfortable memory-foam earpads covered in soft artificial leather.",
+      "price": "999.99",
+      "count": "3",
+      "freeDelivery": true,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": true,
+      "available": true,
+      "tags": [
+        8,
+        9
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 12,
+    "fields": {
+      "category": "2003",
+      "title": "THORENS TD 1500",
+      "description": "SPECIAL FEATURES\r\nSub chassis with three conical springs\r\nBelt drive with polished precision belt\r\nMassive 1.4 kg and 22mm-thick Die-cast aluminum platter\r\nPre-installed cartridge Ortofon 2 M Bronze\r\nElectronical controlled motor\r\nbalanced (XLR) and unbalanced (RCA) output\r\nThorens precision tonearm TP 150",
+      "price": "2599.99",
+      "count": "2",
+      "freeDelivery": true,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": true,
+      "available": true,
+      "tags": [
+        8,
+        10
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 13,
+    "fields": {
+      "category": "2003",
+      "title": "AVM ROTATION R 5.3 MK2",
+      "description": "Record player with Elipso Centric Belt Drive · 10” AVM tone arm, gimbal-mounted · Massive 60 mm HDF composite frame with aluminum cover · 33/45 RPM look forward servo control · Height-adjustable damper feet · Resonance-free dust cover · Dimmable and switchable RGB platter light (all colors)",
+      "price": "14999.99",
+      "count": "1",
+      "freeDelivery": true,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": true,
+      "available": true,
+      "tags": [
+        8,
+        10
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 14,
+    "fields": {
+      "category": "3001",
+      "title": "Google Pixel 7 Pro",
+      "description": "The Pixel 7 Pro is no longer the highest-tier flagship that Google offers; that would be the $1,799 Pixel Fold, but it's still the company's most refined and tested device yet. The 6.7-inch model is now fitted with a more uniform glass-to-aluminum body and sees an updated Google Tensor G2 chip at the helm. With the new processor, the Pixel 7 Pro gets a boost in efficiency, performance, and a series of practical software features like Unblur and Guided Frame, along with last year's fan-favorite,",
+      "price": "699.99",
+      "count": "20",
+      "freeDelivery": true,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        11
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 15,
+    "fields": {
+      "category": "3001",
+      "title": "Motorola Razr Plus",
+      "description": "Despite its small stature, the Motorola Razr Plus packs a lot of features and performance. It's powered by an older Snapdragon 8+ Gen 1 processor but is still capable of running the typical slew of apps and services like Instagram, WhatsApp, YouTube, games, and more. Thanks to the large external display, you can run the same programs without ever needing to flip open the phone. It feels like a two-phones-in-one device in that sense.\r\n\r\nThis quote from review sums up my main thoughts: \"Razr",
+      "price": "999.99",
+      "count": "5",
+      "freeDelivery": true,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        11
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 16,
+    "fields": {
+      "category": "3001",
+      "title": "Samsung Galaxy Z Fold 5",
+      "description": "With the latest model, you'll get up to 12GB of RAM, a new Qualcomm Snapdragon 8 Gen 2 processor powering the system, a flexible display that can expand from 6.2 inches to 7.6 inches, and all the software perks of Android 13. Samsung has also made some improvements to its industrial design to create a more uniform, durable, and lightweight form factor.",
+      "price": "1799.99",
+      "count": "10",
+      "freeDelivery": true,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        11
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 17,
+    "fields": {
+      "category": "3001",
+      "title": "Samsung Galaxy S23 Ultra",
+      "description": "The device comes with arguably the best-looking display on the market with excellent brightness and a quad-camera setup on the rear that's headlined by a high-resolution 200MP camera. Plus, it still features an integrated S Pen stylus for notetaking, sketching, and more. That's only the tip of the iceberg, of course.\r\n\r\nThere are several more subtle upgrades to this year's S23 Ultra, including storage configurations that start at 256GB (versus last year's 128GB), a Snapdragon 8 Gen 2",
+      "price": "1199.99",
+      "count": "25",
+      "freeDelivery": true,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        11
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 18,
+    "fields": {
+      "category": "3001",
+      "title": "Nothing Phone 2",
+      "description": "The key selling point of the Phone 2 is what Nothing calls Glyph Interface, an assembly of LED strips on the back of the phone that blinks in unique patterns depending on incoming alerts and notifications. It's a clever way to leverage the transparent back panel and encourages users to stare at their phone screens less. Bold design philosophy.",
+      "price": "719.99",
+      "count": "25",
+      "freeDelivery": false,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        11
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 19,
+    "fields": {
+      "category": "3001",
+      "title": "OnePlus 11",
+      "description": "Putting the bang-for-your-buck aspect aside, the OnePlus 11 shines above the competition with its charging speed, something you'll quickly take for granted once you realize that phones don't have to be sitting by an outlet for two hours every day. \"The 80W charger is a significant increase in charging speed compared to current market standards and we expect more OEMs to increase fast charging support with future devices,\" Maurice Klaehne, Senior Market Research Analyst at Counterpoint Research,",
+      "price": "549.99",
+      "count": "35",
+      "freeDelivery": false,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        11
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 20,
+    "fields": {
+      "category": "3001",
+      "title": "Google Pixel 7a",
+      "description": "This year, Google's taking things up a notch by adding a smoother 90Hz refresh rate display, wireless charging support (though it's capped at 7.5W), and it's signature Tensor G2 chipset for improved machine learning and overall performance. The new processor also enhances the Pixel's photo-taking capabilities, lending to better capturing of various subjects in various lighting conditions. That's all accented by an inclusive 13MP front-facing camera with a 95-degree field-of-view, which, from ZDN",
+      "price": "449.99",
+      "count": "35",
+      "freeDelivery": false,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        11
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 21,
+    "fields": {
+      "category": "3001",
+      "title": "Samsung Galaxy A54 5G",
+      "description": "Samsung's Galaxy A series of smartphones focus on value, display quality, and battery life above all else. That's a recipe for a great handset if you can live without the flashy features found on more premium devices. And that's also compared to Google's Pixel A devices that put camera performance before other things.",
+      "price": "349.99",
+      "count": "45",
+      "freeDelivery": false,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        11
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 22,
+    "fields": {
+      "category": "3001",
+      "title": "Asus ROG Phone 7 Ultimate",
+      "description": "If there's one area that Android completely dominates iOS in, it's gaming. Whether you game on existing mobile apps or take to the cloud for streaming, Android manufacturers have spent the past decade forging a new category of gaming-tailored smartphones, and the Asus ROG Phone 7 Ultimate may just be the best in its class.",
+      "price": "1399.99",
+      "count": "5",
+      "freeDelivery": true,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        11
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 23,
+    "fields": {
+      "category": "3001",
+      "title": "Fairphone 4",
+      "description": "The humble Fairphone 4 is almost perfect. This eco-conscious Android phone earned a rare 10 out of 10 on iFixit's repairability rankings. It's made of post-consumer recycled materials, like the 100 percent recycled plastic back cover, and the battery is removable and replaceable, as are the camera, speaker, earpiece, USB-C port, screen, and more. You can replace all of these yourself—you need a screwdriver—and these parts will be available until 2027. It's the only smartphone certified as Fairtr",
+      "price": "579.99",
+      "count": "10",
+      "freeDelivery": true,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        11
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 24,
+    "fields": {
+      "category": "3001",
+      "title": "Google Pixel Fold",
+      "description": "The Pixel Fold (8/10, WIRED Recommends) is Google's first folding smartphone. On the outside, you have a wide 5.8-inch screen that you'll primarily use, and it actually feels like using a normal phone screen with zero compromises. When you have both hands free, open it up and you're able to take advantage of a 7.6-inch screen—a larger canvas that makes some apps nicer to use, like Gmail and its two-pane view, but it also allows for easy split-screen mode so you can multitask. This comes in handy",
+      "price": "1799.99",
+      "count": "5",
+      "freeDelivery": true,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        11
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 25,
+    "fields": {
+      "category": "3001",
+      "title": "Xiaomi Redmi Note 11",
+      "description": "The Xiaomi Redmi Note 11 is astonishing value for money. Achieving similar levels of performance as phones costing twice the price, the Redmi Note 11 doesn’t scrimp on features. More formidable than most, the Redmi Note 11 comes into its own in terms of photography with its 50MP camera, and the 90Hz Full HD display is a massive bonus as well.\r\n\r\nIf money is tight and you’re looking for a competent smartphone that punches well above its weight, then the Xiaomi Redmi Note 11 is the smart choice.",
+      "price": "167.49",
+      "count": "50",
+      "freeDelivery": false,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        11
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 26,
+    "fields": {
+      "category": "3001",
+      "title": "Xiaomi 13",
+      "description": "With flagship smartphones ballooning in size with every new release, the compact Xiaomi 13 is a breath of fresh air. If you’re a fan of high-end flagships but prefer your phones to actually fit in your jeans pocket, then the Xiaomi 13 is an excellent choice. It comes equipped with all the latest bells and whistles you’d expect from any modern flagship release, including a super-fast Snapdragon 8 Gen 2 chipset and a wonderful set of cameras.",
+      "price": "799.99",
+      "count": "20",
+      "freeDelivery": false,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        11
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 27,
+    "fields": {
+      "category": "3001",
+      "title": "Oppo Find X5 Pro",
+      "description": "If you’re hoping to take a step off the well-trodden path and you’ve got plenty of cash burning a hole in your pocket, then the Oppo Find X5 Pro should be your next flagship smartphone. It’s not cheap, that much is clear, but if you’ve got the funds you will be rewarded with one of the best-looking smartphones on the market, with the usual array of high-spec features.",
+      "price": "1099.99",
+      "count": "3",
+      "freeDelivery": false,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        11
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 28,
+    "fields": {
+      "category": "3001",
+      "title": "Samsung Galaxy Z Flip 4",
+      "description": "The Galaxy Z Flip is back and it’s yet again the best folding phone you can buy. With IPX8-rated waterproofing, a bigger battery and upgraded performance, the Z Flip 4 is well worth buying, especially if you’re growing bored of conventional handsets. The 120Hz display is quite special, with top-notch colour accuracy in our tests, and the cameras have been improved, too.",
+      "price": "1099.99",
+      "count": "5",
+      "freeDelivery": false,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        11
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 29,
+    "fields": {
+      "category": "3001",
+      "title": "Sony Xperia Pro-I",
+      "description": "If there’s one thing Sony has nailed in recent years, it’s smartphone camera tech. After all, the company’s cameras are so good that many Android manufacturers use Sony sensors in their own handsets, and there’s no sign that this will stop anytime soon, either. But, of course, the very best Sony has to offer comes in the form of its own Xperia Pro-I, a (very) high-priced flagship with one of the most comprehensive and well-thought-out camera offerings to date.",
+      "price": "1399.99",
+      "count": "2",
+      "freeDelivery": true,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        11
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 30,
+    "fields": {
+      "category": "3001",
+      "title": "Apple iPhone 15 Pro Max",
+      "description": "As usual, the top-end iPhone models are where you’ll find the biggest upgrades and there are a good amount of them this time around. With a new titanium frame, 5x periscope zoom and the introduction of the A17 Pro, the Pro Max is looking to be a formidable smartphone for the year ahead.",
+      "price": "1599.99",
+      "count": "3",
+      "freeDelivery": false,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        11
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 31,
+    "fields": {
+      "category": "3001",
+      "title": "OnePlus Nord 2T 5G",
+      "description": "OnePlus has produced yet another exceptionally priced smartphone in the OnePlus Nord 2T 5G. As the name implies, this is a 5G-enabled handset with a host of top-end features for relatively little money. It’s the fastest smartphone in its price bracket, courtesy of the rapid MediaTek Dimensity 1300 chipset, and it’s no slouch when it comes to battery life either – lasting for almost a full 24 hours on a single charge in our tests.",
+      "price": "373.99",
+      "count": "10",
+      "freeDelivery": false,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        11
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 32,
+    "fields": {
+      "category": "3001",
+      "title": "Xiaomi Poco X5 Pro",
+      "description": "The Xiaomi Poco X5 Pro is a great choice for the budget-conscious buyer. The brand might still be a bit of an unknown in the UK, but the Poco X5 Pro is stupendously good value for money, and it even outperforms handsets that cost double, and in some cases triple, the asking price. An easy recommendation if you aren’t comfortable handing over £700+ on the latest and greatest handsets, the Poco X5 Pro is fitted with all the best bells and whistles: it has a 6.67in Full HD AMOLED screen, a 5G-supp",
+      "price": "369.99",
+      "count": "0",
+      "freeDelivery": false,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        11
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 33,
+    "fields": {
+      "category": "3001",
+      "title": "Honor Magic 5 Lite",
+      "description": "If battery life is most important to you when choosing a new phone, the only entry in this list you need to pay attention to is the Honor Magic 5 Lite. In our standard looping video test, the Magic 5 Lite managed an astounding 28 hours, outlasting plenty of phones that cost two or three times as much. And for when its epic stamina is finally exhausted, it supports 40W fast charging – though there’s no charger included in the box. The 6.67in display is a vibrant OLED panel, with punchy colours.",
+      "price": "279.99",
+      "count": "10",
+      "freeDelivery": false,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        11
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 34,
+    "fields": {
+      "category": "3001",
+      "title": "Realme 9 Pro Plus",
+      "description": "Delivering flagship specifications at not-so-flagship prices, the Realme 9 Pro Plus has set a very high bar for pure value. The Super AMOLED screen is sharp and buttery smooth, thanks to a maximum 90Hz refresh rate. Battery life extends beyond 25 hours and once depleted, can be returned to 100% in just over 40 minutes via the included 60W fast charger.",
+      "price": "348.99",
+      "count": "3",
+      "freeDelivery": false,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        11
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 35,
+    "fields": {
+      "category": "3001",
+      "title": "Xiaomi 12T",
+      "description": "Xiaomi 12T is still astonishing value. If you’re happy parting with a bit more cash, you will be rewarded with one of the most feature-complete handsets outside of the flagship territory, with the Xiaomi 12T putting pricier high-end handsets to shame.\r\n\r\nIt impressed in testing with its wonderfully sharp, colour accurate 6.67in FHD+ AMOLED display, respectably powerful MediaTek Dimensity 8100-U chipset and stupendously fast 120W charging (which went from empty to 68% in just 15 minutes, and full",
+      "price": "460.99",
+      "count": "10",
+      "freeDelivery": true,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        11
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 36,
+    "fields": {
+      "category": "1001",
+      "title": "ODROID-XU4",
+      "description": "Fast processing and good user community! I had only one problem with the fan model heatsink thermal connection coming loose but was easily fixed with some thermal paste! Other than that, it can be loud, but it can all be mitigated if you don't mind a little tinkering...",
+      "price": "48.99",
+      "count": "5",
+      "freeDelivery": false,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 37,
+    "fields": {
+      "category": "1001",
+      "title": "ASUS Tinker Board",
+      "description": "The ASUS Tinker Board offers performance that outclasses other single-board computers in this price range. It can easily be used as a daily PC substitute and it can easily handle some tasks that competitors (like the Pi 3 for example) find difficult. Things like image editing, streaming Full HD videos, and even playing some simple browser-based games can easily be done on the Tinker Board.",
+      "price": "59.99",
+      "count": "15",
+      "freeDelivery": true,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 38,
+    "fields": {
+      "category": "1001",
+      "title": "Orange Pi PC",
+      "description": "Orange Pi supports Raspbian, Ubuntu, Android and many more operating systems. It claims to support all OSes supported by Raspberry Pi and it seems to be true most of the time.",
+      "price": "14.99",
+      "count": "20",
+      "freeDelivery": false,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 39,
+    "fields": {
+      "category": "1001",
+      "title": "The Parallella Board",
+      "description": "The Parallella Board makes use of the Epiphany III coprocessor which is invisible to the OS unless directly addressed through its APIs. It currently boasts 32 gigaflops from its 16-core variant with a promise of 100 gigaflops for a 64-core model which will be available in the future.",
+      "price": "98.99",
+      "count": "3",
+      "freeDelivery": true,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 40,
+    "fields": {
+      "category": "1001",
+      "title": "LattePanda 4G/64GB",
+      "description": "Lattepanda is a powerful SBC with a 64-bit Intel CPU. It has integrated Bluetooth and Wifi and is Arduino compatible. It's also one of the few SBCs to have full (if unofficial) support for Windows 10.",
+      "price": "159.99",
+      "count": "8",
+      "freeDelivery": true,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 41,
+    "fields": {
+      "category": "1001",
+      "title": "ESPRESSObin",
+      "description": "Few SOC boards have this feature and there are a couple of Mini-PCIE RAID cards on the market that might work nicely.",
+      "price": "48.99",
+      "count": "3",
+      "freeDelivery": true,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 42,
+    "fields": {
+      "category": "1001",
+      "title": "PINE A64",
+      "description": "The Pine A64 is a powerful and cheap (just $15) single-board computer that can be used for anything most SBCs are used nowadays.",
+      "price": "14.99",
+      "count": "10",
+      "freeDelivery": true,
+      "date": "2023-09-17",
+      "archived": false,
+      "limited": false,
+      "available": true,
+      "tags": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 11,
+    "fields": {
+      "product": 1,
+      "src": "products/product_1/images/QualcommDragonboard410c.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 12,
+    "fields": {
+      "product": 2,
+      "src": "products/product_2/images/RaspberryPi3B.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 13,
+    "fields": {
+      "product": 3,
+      "src": "products/product_3/images/Rock64-4.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 14,
+    "fields": {
+      "product": 4,
+      "src": "products/product_4/images/Udox86Ultra.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 15,
+    "fields": {
+      "product": 5,
+      "src": "products/product_5/images/XeroxC230.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 16,
+    "fields": {
+      "product": 6,
+      "src": "products/product_6/images/KyoceraM2540dn.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 17,
+    "fields": {
+      "product": 7,
+      "src": "products/product_7/images/X79Motherboard.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 18,
+    "fields": {
+      "product": 8,
+      "src": "products/product_8/images/6HPCooler.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 19,
+    "fields": {
+      "product": 9,
+      "src": "products/product_9/images/Denon_PMA-900HNE.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 20,
+    "fields": {
+      "product": 10,
+      "src": "products/product_10/images/Marantz_PM-10.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 21,
+    "fields": {
+      "product": 11,
+      "src": "products/product_11/images/Denon_AH-D7200.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 22,
+    "fields": {
+      "product": 12,
+      "src": "products/product_12/images/THORENS_TD_1500.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 23,
+    "fields": {
+      "product": 13,
+      "src": "products/product_13/images/AVM_RotationR53.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 24,
+    "fields": {
+      "product": 14,
+      "src": "products/product_14/images/GooglePixel7Pro.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 25,
+    "fields": {
+      "product": 15,
+      "src": "products/product_15/images/MotorolaRazrPlus.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 26,
+    "fields": {
+      "product": 16,
+      "src": "products/product_16/images/GalaxyZFold5.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 27,
+    "fields": {
+      "product": 17,
+      "src": "products/product_17/images/GalaxyS23Ultra.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 28,
+    "fields": {
+      "product": 18,
+      "src": "products/product_18/images/Nothingphone2.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 29,
+    "fields": {
+      "product": 19,
+      "src": "products/product_19/images/Oneplus11.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 30,
+    "fields": {
+      "product": 20,
+      "src": "products/product_20/images/GooglePixel7a.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 31,
+    "fields": {
+      "product": 21,
+      "src": "products/product_21/images/GalaxyA545G.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 32,
+    "fields": {
+      "product": 22,
+      "src": "products/product_22/images/AsusROGPhone7Ultimate.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 33,
+    "fields": {
+      "product": 23,
+      "src": "products/product_23/images/Fairphone4.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 34,
+    "fields": {
+      "product": 24,
+      "src": "products/product_24/images/GooglePixelFold.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 35,
+    "fields": {
+      "product": 25,
+      "src": "products/product_25/images/Xiaomiredminote11.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 36,
+    "fields": {
+      "product": 26,
+      "src": "products/product_26/images/Xiaomi13.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 37,
+    "fields": {
+      "product": 27,
+      "src": "products/product_27/images/OppoX5Find.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 38,
+    "fields": {
+      "product": 28,
+      "src": "products/product_28/images/GalaxyZFlip4.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 39,
+    "fields": {
+      "product": 29,
+      "src": "products/product_29/images/SonyXPeriaPtoI.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 40,
+    "fields": {
+      "product": 30,
+      "src": "products/product_30/images/AppleIphone15ProMax.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 41,
+    "fields": {
+      "product": 31,
+      "src": "products/product_31/images/OneplusNord2T5G.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 42,
+    "fields": {
+      "product": 32,
+      "src": "products/product_32/images/XiaomiPocoX5Pro.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 43,
+    "fields": {
+      "product": 33,
+      "src": "products/product_33/images/HonorMagic5Lite.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 44,
+    "fields": {
+      "product": 34,
+      "src": "products/product_34/images/Realme9Pro.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 45,
+    "fields": {
+      "product": 35,
+      "src": "products/product_35/images/Xiaomi12T.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 46,
+    "fields": {
+      "product": 36,
+      "src": "products/product_36/images/OdroidXU4.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 47,
+    "fields": {
+      "product": 37,
+      "src": "products/product_37/images/AsusTinkerBoard.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 48,
+    "fields": {
+      "product": 38,
+      "src": "products/product_38/images/OrangePiPC.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 49,
+    "fields": {
+      "product": 39,
+      "src": "products/product_39/images/ParallellaBoard.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 50,
+    "fields": {
+      "product": 40,
+      "src": "products/product_40/images/LatePanda.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 51,
+    "fields": {
+      "product": 41,
+      "src": "products/product_41/images/EspressoBin.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.productimage",
+    "pk": 52,
+    "fields": {
+      "product": 42,
+      "src": "products/product_42/images/PineA64.png",
+      "alt": "There should be an image of the product"
+    }
+  },
+  {
+    "model": "api.review",
+    "pk": 16,
+    "fields": {
+      "author": 1,
+      "rate": 4,
+      "text": "RESPECTABLEERIU'S EXPERIENCE\r\n4-slow-cores with that little amount of ram for $130? Are you nuts?",
+      "date": "2023-08-14T12:36:58.645Z",
+      "product": 1
+    }
+  },
+  {
+    "model": "api.review",
+    "pk": 17,
+    "fields": {
+      "author": 1,
+      "rate": 3,
+      "text": "Slow\r\nThe unit is not up to par with similar single board computers running more than twice the performance per dollar.",
+      "date": "2023-08-14T12:37:31.955Z",
+      "product": 1
+    }
+  },
+  {
+    "model": "api.review",
+    "pk": 18,
+    "fields": {
+      "author": 1,
+      "rate": 4,
+      "text": "Quite expensive\r\nIts expensive for an SBC.",
+      "date": "2023-08-14T12:37:57.245Z",
+      "product": 1
+    }
+  },
+  {
+    "model": "api.review",
+    "pk": 19,
+    "fields": {
+      "author": 1,
+      "rate": 5,
+      "text": "Best community and software support by far easily makes this the preferred choice regardless of hardware.",
+      "date": "2023-08-14T12:57:34.596Z",
+      "product": 2
+    }
+  },
+  {
+    "model": "api.review",
+    "pk": 20,
+    "fields": {
+      "author": 1,
+      "rate": 5,
+      "text": "Great support, you can find answers to any problem you have, and build almost anything you want.",
+      "date": "2023-08-14T12:58:02.093Z",
+      "product": 2
+    }
+  },
+  {
+    "model": "api.review",
+    "pk": 21,
+    "fields": {
+      "author": 1,
+      "rate": 4,
+      "text": "https://www.slant.co/topics/1629/~best-single-board-computers#41:~:text=Lack%20of%20support,is%20very%20small.",
+      "date": "2023-08-14T13:01:29.910Z",
+      "product": 3
+    }
+  },
+  {
+    "model": "api.review",
+    "pk": 22,
+    "fields": {
+      "author": 1,
+      "rate": 5,
+      "text": "Very reliable printer. Use it for about two years with no problems at all.",
+      "date": "2023-08-14T13:15:30.389Z",
+      "product": 5
+    }
+  },
+  {
+    "model": "api.review",
+    "pk": 23,
+    "fields": {
+      "author": 1,
+      "rate": 5,
+      "text": "Good support.",
+      "date": "2023-08-14T13:15:59.649Z",
+      "product": 5
+    }
+  },
+  {
+    "model": "api.review",
+    "pk": 38,
+    "fields": {
+      "author": 1,
+      "rate": 5,
+      "text": "амывывываы",
+      "date": "2023-08-25T12:27:26.064Z",
+      "product": 5
+    }
+  },
+  {
+    "model": "api.review",
+    "pk": 39,
+    "fields": {
+      "author": 1,
+      "rate": 5,
+      "text": "gsrgsdrhdxfhcfhncfgv",
+      "date": "2023-09-14T09:37:07.769Z",
+      "product": 2
+    }
+  },
+  {
+    "model": "api.productsale",
+    "pk": 1,
+    "fields": {
+      "product": 9,
+      "salePrice": "799.99",
+      "dateFrom": "2023-08-07T17:02:32Z",
+      "dateTo": "2023-09-20T23:59:59Z"
+    }
+  },
+  {
+    "model": "api.productsale",
+    "pk": 2,
+    "fields": {
+      "product": 6,
+      "salePrice": "699.99",
+      "dateFrom": "2023-08-07T17:03:28Z",
+      "dateTo": "2023-09-20T00:00:00Z"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 1,
+    "fields": {
+      "product": 1,
+      "name": "CPU",
+      "value": "Quad-core Cortex-A53 @ 1.2 GHz"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 2,
+    "fields": {
+      "product": 1,
+      "name": "RAM",
+      "value": "1GB LPDDR3 (533MHz)"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 3,
+    "fields": {
+      "product": 1,
+      "name": "USB",
+      "value": "2 x USB 2.0 or Micro USB"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 4,
+    "fields": {
+      "product": 1,
+      "name": "GPU",
+      "value": "Qualcomm Adreno 306 @ 400MHz"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 5,
+    "fields": {
+      "product": 2,
+      "name": "CPU",
+      "value": "Broadcom BCM2837 (4x up to 1.2 GHz)"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 6,
+    "fields": {
+      "product": 2,
+      "name": "RAM",
+      "value": "1 GB"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 7,
+    "fields": {
+      "product": 2,
+      "name": "USB",
+      "value": "4x USB 2.0"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 8,
+    "fields": {
+      "product": 2,
+      "name": "GPU",
+      "value": "Broadcom video core 4"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 9,
+    "fields": {
+      "product": 3,
+      "name": "CPU",
+      "value": "Rockchip RK3328"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 10,
+    "fields": {
+      "product": 3,
+      "name": "RAM",
+      "value": "1/2/4GB"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 11,
+    "fields": {
+      "product": 3,
+      "name": "USB",
+      "value": "2x USB 2.0 1x USB 3.0"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 12,
+    "fields": {
+      "product": 3,
+      "name": "GPU",
+      "value": "ARM Mali-450MP2 Dual-core GPU"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 13,
+    "fields": {
+      "product": 4,
+      "name": "CPU",
+      "value": "Intel Pentium N3710 (4x 1,6 GHz, Intel Burst up to"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 14,
+    "fields": {
+      "product": 4,
+      "name": "RAM",
+      "value": "8 GB DDR3L"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 15,
+    "fields": {
+      "product": 4,
+      "name": "USB",
+      "value": "3 x USB 3.0"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 16,
+    "fields": {
+      "product": 4,
+      "name": "GPU",
+      "value": "Intel i9xx"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 17,
+    "fields": {
+      "product": 14,
+      "name": "Processor",
+      "value": "Google Tensor G2"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 18,
+    "fields": {
+      "product": 14,
+      "name": "Display size",
+      "value": "6.7 inches"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 19,
+    "fields": {
+      "product": 14,
+      "name": "Storage options",
+      "value": "128GB/256GB/512GB"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 20,
+    "fields": {
+      "product": 14,
+      "name": "Rear cameras",
+      "value": "50MP main, 12MP ultrawide, 48MP telephoto"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 21,
+    "fields": {
+      "product": 14,
+      "name": "Front camera",
+      "value": "10.8 MP"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 22,
+    "fields": {
+      "product": 15,
+      "name": "Processor",
+      "value": "Qualcomm Snapdragon 8+ Gen 1"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 23,
+    "fields": {
+      "product": 15,
+      "name": "Display size",
+      "value": "3.6 inches external, 6.9 inches internal"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 24,
+    "fields": {
+      "product": 15,
+      "name": "Storage options",
+      "value": "256GB"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 25,
+    "fields": {
+      "product": 15,
+      "name": "Rear cameras",
+      "value": "12MP main, 13MP ultra-wide"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 26,
+    "fields": {
+      "product": 15,
+      "name": "Front camera",
+      "value": "32MP"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 27,
+    "fields": {
+      "product": 16,
+      "name": "Processor",
+      "value": "Qualcomm Snapdragon 8 Gen 2"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 28,
+    "fields": {
+      "product": 16,
+      "name": "Display size",
+      "value": "6.2 (outer) and 7.6 inches (inner)"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 29,
+    "fields": {
+      "product": 16,
+      "name": "Storage options",
+      "value": "256GB/512GB/1TB"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 30,
+    "fields": {
+      "product": 16,
+      "name": "Rear cameras",
+      "value": "50MP main, 12MP ultrawide, 10MP tele"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 31,
+    "fields": {
+      "product": 16,
+      "name": "Front camera",
+      "value": "10MP (outer) 4MP and (inner)"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 32,
+    "fields": {
+      "product": 17,
+      "name": "Processor",
+      "value": "Qualcomm Snapdragon 8 Gen 2 for Galaxy"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 33,
+    "fields": {
+      "product": 17,
+      "name": "Display size",
+      "value": "6.8 inches"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 34,
+    "fields": {
+      "product": 17,
+      "name": "Storage options",
+      "value": "256GB/512GB/1TB"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 35,
+    "fields": {
+      "product": 17,
+      "name": "Rear cameras",
+      "value": "200MP main, 12MP ultrawide, 10MP 10x optical"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 36,
+    "fields": {
+      "product": 17,
+      "name": "Front camera",
+      "value": "12MP"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 37,
+    "fields": {
+      "product": 18,
+      "name": "Processor",
+      "value": "Qualcomm Snapdragon 8+ Gen 1"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 38,
+    "fields": {
+      "product": 18,
+      "name": "Display size",
+      "value": "6.7 inches"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 39,
+    "fields": {
+      "product": 18,
+      "name": "Storage options",
+      "value": "128GB/256GB/512GB"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 40,
+    "fields": {
+      "product": 18,
+      "name": "Rear cameras",
+      "value": "50MP main, 50MP ultrawide"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 41,
+    "fields": {
+      "product": 18,
+      "name": "Front camera",
+      "value": "32MP"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 42,
+    "fields": {
+      "product": 19,
+      "name": "Processor",
+      "value": "Qualcomm Snapdragon 8 Gen 2"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 43,
+    "fields": {
+      "product": 19,
+      "name": "Display size",
+      "value": "6.7 inches"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 44,
+    "fields": {
+      "product": 19,
+      "name": "Storage options",
+      "value": "128GB/256GB"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 45,
+    "fields": {
+      "product": 19,
+      "name": "Rear cameras",
+      "value": "50MP main, 48MP ultrawide, 32MP telephoto"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 46,
+    "fields": {
+      "product": 19,
+      "name": "Front camera",
+      "value": "16 MP"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 47,
+    "fields": {
+      "product": 20,
+      "name": "Processor",
+      "value": "Google Tensor G2"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 48,
+    "fields": {
+      "product": 20,
+      "name": "Display size",
+      "value": "6.1 inches"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 49,
+    "fields": {
+      "product": 20,
+      "name": "Storage options",
+      "value": "128GB"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 50,
+    "fields": {
+      "product": 20,
+      "name": "Rear cameras",
+      "value": "64MP main, 12MP ultrawide"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 51,
+    "fields": {
+      "product": 20,
+      "name": "Front camera",
+      "value": "13 MP"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 52,
+    "fields": {
+      "product": 21,
+      "name": "Processor",
+      "value": "Exynos 1380"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 53,
+    "fields": {
+      "product": 21,
+      "name": "Display size",
+      "value": "6.4 inches"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 54,
+    "fields": {
+      "product": 21,
+      "name": "Storage options",
+      "value": "128GB"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 55,
+    "fields": {
+      "product": 21,
+      "name": "Rear cameras",
+      "value": "50MP wide, 12MP ultrawide, 5MP macro"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 56,
+    "fields": {
+      "product": 21,
+      "name": "Front camera",
+      "value": "32MP"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 57,
+    "fields": {
+      "product": 22,
+      "name": "Processor",
+      "value": "Qualcomm Snapdragon 8 Gen 2"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 58,
+    "fields": {
+      "product": 22,
+      "name": "Display size",
+      "value": "6.78 inches"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 59,
+    "fields": {
+      "product": 22,
+      "name": "Storage options",
+      "value": "512GB"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 60,
+    "fields": {
+      "product": 22,
+      "name": "Rear cameras",
+      "value": "50MP main, 13MP ultrawide, 5MP macro"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 61,
+    "fields": {
+      "product": 22,
+      "name": "Front camera",
+      "value": "32MP"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 62,
+    "fields": {
+      "product": 23,
+      "name": "Processor",
+      "value": "Qualcomm Snapdragon 750G"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 63,
+    "fields": {
+      "product": 23,
+      "name": "Storage options",
+      "value": "6GB/128GB or 8GB/256GB"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 64,
+    "fields": {
+      "product": 23,
+      "name": "Display size",
+      "value": "6.3 Inches"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 65,
+    "fields": {
+      "product": 23,
+      "name": "Rear cameras",
+      "value": "dual 48MP"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 66,
+    "fields": {
+      "product": 24,
+      "name": "Processor",
+      "value": "Qualcomm Snapdragon 8 Gen 2"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 67,
+    "fields": {
+      "product": 24,
+      "name": "Display size",
+      "value": "Outer 5.8 Inches, Inner 7,6 Inches"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 68,
+    "fields": {
+      "product": 24,
+      "name": "Storage options",
+      "value": "128GB/256GB"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 69,
+    "fields": {
+      "product": 24,
+      "name": "Rear cameras",
+      "value": "50MP, 12MP (wide)"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 70,
+    "fields": {
+      "product": 25,
+      "name": "Processor",
+      "value": "2.4GHz Qualcomm Snapdragon 680"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 71,
+    "fields": {
+      "product": 25,
+      "name": "Display size",
+      "value": "6.43 Inches, 2,400 x 1,080"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 72,
+    "fields": {
+      "product": 25,
+      "name": "Cameras",
+      "value": "50MP, 8MP (wide) 2MP (macro) and 2MP (depth)"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 73,
+    "fields": {
+      "product": 25,
+      "name": "Storage options",
+      "value": "128GB"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 74,
+    "fields": {
+      "product": 26,
+      "name": "Processor",
+      "value": "Qualcomm Snapdragon 8 Gen 2"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 75,
+    "fields": {
+      "product": 26,
+      "name": "Display size",
+      "value": "6.36 Inches"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 76,
+    "fields": {
+      "product": 26,
+      "name": "Storage options",
+      "value": "256GB"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 77,
+    "fields": {
+      "product": 26,
+      "name": "Cameras",
+      "value": "50MP, 10MP (telephoto), 12MP (wide)"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 78,
+    "fields": {
+      "product": 27,
+      "name": "Processor",
+      "value": "Qualcomm Snapdragon 8 Gen 1"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 79,
+    "fields": {
+      "product": 27,
+      "name": "Display size",
+      "value": "6.7 inches"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 80,
+    "fields": {
+      "product": 27,
+      "name": "Storage options",
+      "value": "128GB"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 81,
+    "fields": {
+      "product": 27,
+      "name": "Cameras",
+      "value": "50MP, 50MP (wide), 13MP (zoom)"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 82,
+    "fields": {
+      "product": 28,
+      "name": "Processor",
+      "value": "Qualcomm Snapdragon 8 Gen 1"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 83,
+    "fields": {
+      "product": 28,
+      "name": "Display size",
+      "value": "6.7 inches/1.9 Inches cover"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 84,
+    "fields": {
+      "product": 28,
+      "name": "Storage options",
+      "value": "128GB/256GB"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 85,
+    "fields": {
+      "product": 28,
+      "name": "Cameras",
+      "value": "12MP and 12MP (wide)"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 86,
+    "fields": {
+      "product": 29,
+      "name": "Processor",
+      "value": "Qualcomm Snapdragon 8 Gen 1"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 87,
+    "fields": {
+      "product": 29,
+      "name": "Display size",
+      "value": "6.5 inches"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 88,
+    "fields": {
+      "product": 29,
+      "name": "Storage options",
+      "value": "512GB"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 89,
+    "fields": {
+      "product": 29,
+      "name": "Cameras",
+      "value": "12MP, 12MP (telephoto), 12MP (ultrawide)"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 90,
+    "fields": {
+      "product": 30,
+      "name": "Processor",
+      "value": "Apple hexa-core 3nm A17 Pro chipset"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 91,
+    "fields": {
+      "product": 30,
+      "name": "Display size",
+      "value": "6.7 inches"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 92,
+    "fields": {
+      "product": 30,
+      "name": "Storage options",
+      "value": "256GB/512GB/1TB"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 93,
+    "fields": {
+      "product": 30,
+      "name": "Cameras",
+      "value": "48MP main, 12MP ultrawide, 12MP 5x telephoto"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 94,
+    "fields": {
+      "product": 31,
+      "name": "Processor",
+      "value": "3GHz MediaTek Dimensity 1300"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 95,
+    "fields": {
+      "product": 31,
+      "name": "Display size",
+      "value": "6.43 Inches"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 96,
+    "fields": {
+      "product": 31,
+      "name": "Storage options",
+      "value": "128GB/256GB"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 97,
+    "fields": {
+      "product": 31,
+      "name": "Cameras",
+      "value": "50MP, 8MP (wide), 2MP (depth)"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 98,
+    "fields": {
+      "product": 32,
+      "name": "Processor",
+      "value": "2.4GHz Qualcomm Snapdragon 778G"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 99,
+    "fields": {
+      "product": 32,
+      "name": "Display size",
+      "value": "6.67 Inches"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 100,
+    "fields": {
+      "product": 32,
+      "name": "Storage options",
+      "value": "256GB"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 101,
+    "fields": {
+      "product": 32,
+      "name": "Cameras",
+      "value": "108MP, 8MP (wide), 2MP (macro)"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 102,
+    "fields": {
+      "product": 33,
+      "name": "Processor",
+      "value": "2.2GHz Qualcomm Snapdragon 695"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 103,
+    "fields": {
+      "product": 33,
+      "name": "Display size",
+      "value": "6.67 Inches"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 104,
+    "fields": {
+      "product": 33,
+      "name": "Storage options",
+      "value": "128GB"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 105,
+    "fields": {
+      "product": 33,
+      "name": "Cameras",
+      "value": "64MP, 5MP (ultrawide), 2MP (macro)"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 106,
+    "fields": {
+      "product": 34,
+      "name": "Processor",
+      "value": "Octa-core 2.5GHz MediaTek Dimensity 920 5G"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 107,
+    "fields": {
+      "product": 34,
+      "name": "Display size",
+      "value": "6.4 inches"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 108,
+    "fields": {
+      "product": 34,
+      "name": "Storage options",
+      "value": "128GB/256GB"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 109,
+    "fields": {
+      "product": 34,
+      "name": "Cameras",
+      "value": "50MP, 8MP (ultrawide), 2MP (macro), 16MP (selfie)"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 110,
+    "fields": {
+      "product": 35,
+      "name": "Processor",
+      "value": "Octa-core 2.85GHz MediaTek Dimensity 8100-U"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 111,
+    "fields": {
+      "product": 35,
+      "name": "Display size",
+      "value": "6.67 Inches"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 112,
+    "fields": {
+      "product": 35,
+      "name": "Storage options",
+      "value": "128GB/256GB"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 113,
+    "fields": {
+      "product": 35,
+      "name": "Cameras",
+      "value": "108MP, 8MP (ultrawide), 2MP (macro), 20MP (selfie)"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 114,
+    "fields": {
+      "product": 36,
+      "name": "CPU",
+      "value": "Samsung Exynos 5 Octa 5422 (4x up to 2.1 GHz + 4x"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 115,
+    "fields": {
+      "product": 36,
+      "name": "RAM",
+      "value": "2Gbyte LPDDR3 RAM PoP stacked"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 116,
+    "fields": {
+      "product": 36,
+      "name": "USB",
+      "value": "2xUSB3 1xUSB2"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 117,
+    "fields": {
+      "product": 36,
+      "name": "GPU",
+      "value": "Mali-T628 MP6"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 118,
+    "fields": {
+      "product": 37,
+      "name": "CPU",
+      "value": "Rockchip RK3288-C (4x up to 1.8GHz)"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 119,
+    "fields": {
+      "product": 37,
+      "name": "RAM",
+      "value": "2 GB LPDDR3"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 120,
+    "fields": {
+      "product": 37,
+      "name": "USB",
+      "value": "4 x USB 2.0"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 121,
+    "fields": {
+      "product": 37,
+      "name": "GPU",
+      "value": "ARM Mali-T760"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 122,
+    "fields": {
+      "product": 38,
+      "name": "CPU",
+      "value": "A7 Quad (Allwinner H3) 1.3GHz"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 123,
+    "fields": {
+      "product": 38,
+      "name": "RAM",
+      "value": "1GB DDR3 SDRAM"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 124,
+    "fields": {
+      "product": 38,
+      "name": "USB",
+      "value": "3"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 125,
+    "fields": {
+      "product": 38,
+      "name": "Storage",
+      "value": "TF"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 126,
+    "fields": {
+      "product": 39,
+      "name": "CPU",
+      "value": "ARM Cortex-A9 dual-core, Epiphany III 16 Core"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 127,
+    "fields": {
+      "product": 39,
+      "name": "RAM",
+      "value": "1GB DDR3 SDRAM"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 128,
+    "fields": {
+      "product": 39,
+      "name": "USB",
+      "value": "1 x USB 2.0"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 129,
+    "fields": {
+      "product": 39,
+      "name": "Size",
+      "value": "90mm x 55mm x 18mm"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 130,
+    "fields": {
+      "product": 40,
+      "name": "CPU",
+      "value": "Intel Atom x5-Z8350 Processor"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 131,
+    "fields": {
+      "product": 40,
+      "name": "RAM",
+      "value": "4 GB"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 132,
+    "fields": {
+      "product": 40,
+      "name": "USB",
+      "value": "2 x USB 2.0 and 1 x USB 3.0"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 133,
+    "fields": {
+      "product": 40,
+      "name": "GPU",
+      "value": "Intel HD Graphics, 12 EUs @200-500Mhz"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 134,
+    "fields": {
+      "product": 41,
+      "name": "CPU",
+      "value": "ARM Cortex A53 processor up to 1.2GHz"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 135,
+    "fields": {
+      "product": 41,
+      "name": "RAM",
+      "value": "1GB or 2GB DDR4"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 136,
+    "fields": {
+      "product": 42,
+      "name": "CPU",
+      "value": "1.2 GHz Quad-Core ARM Cortex A53 64-Bit"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 137,
+    "fields": {
+      "product": 42,
+      "name": "RAM",
+      "value": "512MB / 1GB / 2GB"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 138,
+    "fields": {
+      "product": 42,
+      "name": "USB",
+      "value": "2x USB 2.0"
+    }
+  },
+  {
+    "model": "api.productspecifications",
+    "pk": 139,
+    "fields": {
+      "product": 42,
+      "name": "GPU",
+      "value": "Dual Core Mali 400 MP2 Graphics card"
+    }
+  },
+  {
+    "model": "api.basket",
+    "pk": 82,
+    "fields": {
+      "user": 1,
+      "date": "2023-09-17T17:26:54.005Z",
+      "product": 15,
+      "count": "1"
+    }
+  },
+  {
+    "model": "api.order",
+    "pk": 202,
+    "fields": {
+      "createdAt": "2023-09-04T18:10:15.373Z",
+      "paymentType": "someone",
+      "deliveryType": "express",
+      "status": "paid",
+      "city": "Москва",
+      "address": "2-я Пугачевская\n6 корпус 2\n151",
+      "fullName": "Михаил Нарциссов",
+      "email": "Nartsissov@mail.ru",
+      "phone": 79151358871,
+      "user": 1
+    }
+  },
+  {
+    "model": "api.order",
+    "pk": 203,
+    "fields": {
+      "createdAt": "2023-09-06T17:05:41.031Z",
+      "paymentType": "someone",
+      "deliveryType": "express",
+      "status": "accepted",
+      "city": "Москва",
+      "address": "2-я Пугачевская\n6 корпус 2\n151",
+      "fullName": "Михаил Нарциссов",
+      "email": "Nartsissov@mail.ru",
+      "phone": 79151358871,
+      "user": 1
+    }
+  },
+  {
+    "model": "api.order",
+    "pk": 204,
+    "fields": {
+      "createdAt": "2023-09-06T17:08:28.401Z",
+      "paymentType": "someone",
+      "deliveryType": "express",
+      "status": "paid",
+      "city": "Moscow",
+      "address": "2nd Pugachovskaya\n6-2-151",
+      "fullName": "Михаил Нарциссов",
+      "email": "Nartsissov@mail.ru",
+      "phone": 79151358871,
+      "user": 1
+    }
+  },
+  {
+    "model": "api.order",
+    "pk": 205,
+    "fields": {
+      "createdAt": "2023-09-06T17:49:53.134Z",
+      "paymentType": "someone",
+      "deliveryType": "express",
+      "status": "paid",
+      "city": "Москва",
+      "address": "2-я Пугачевская улица, 6-2-151",
+      "fullName": "Mikhail Nartsissov",
+      "email": "Nartsissov@mail.ru",
+      "phone": 79151358871,
+      "user": 1
+    }
+  },
+  {
+    "model": "api.order",
+    "pk": 206,
+    "fields": {
+      "createdAt": "2023-09-13T16:45:37.486Z",
+      "paymentType": "someone",
+      "deliveryType": "express",
+      "status": "paid",
+      "city": "Москва",
+      "address": "2-я улица Строителей 44",
+      "fullName": "Mikhail Nartsissov",
+      "email": "Nartsissov@mail.ru",
+      "phone": 79151358871,
+      "user": 1
+    }
+  },
+  {
+    "model": "api.order",
+    "pk": 207,
+    "fields": {
+      "createdAt": "2023-09-13T19:25:35.046Z",
+      "paymentType": "someone",
+      "deliveryType": "express",
+      "status": "paid",
+      "city": "Moscow",
+      "address": "Kremlim",
+      "fullName": "Mikhail Nartsissov",
+      "email": "Nartsissov@mail.ru",
+      "phone": 79151358871,
+      "user": 1
+    }
+  },
+  {
+    "model": "api.order",
+    "pk": 208,
+    "fields": {
+      "createdAt": "2023-09-13T19:28:37.877Z",
+      "paymentType": "online",
+      "deliveryType": "ordinary",
+      "status": "paid",
+      "city": "Moscow",
+      "address": "2nd Pugachovskaya",
+      "fullName": "Mikhail Nartsissov",
+      "email": "user@domain.com",
+      "phone": 79166046925,
+      "user": 10
+    }
+  },
+  {
+    "model": "api.order",
+    "pk": 209,
+    "fields": {
+      "createdAt": "2023-09-14T09:38:16.219Z",
+      "paymentType": "someone",
+      "deliveryType": "express",
+      "status": "paid",
+      "city": "Moscow",
+      "address": "Kremlin",
+      "fullName": "Mikhail Nartsissov",
+      "email": "Nartsissov@mail.ru",
+      "phone": 79151358871,
+      "user": 1
+    }
+  },
+  {
+    "model": "api.order",
+    "pk": 211,
+    "fields": {
+      "createdAt": "2023-09-16T11:09:17.138Z",
+      "paymentType": "someone",
+      "deliveryType": "ordinary",
+      "status": "paid",
+      "city": "London",
+      "address": "Trafalgar square,1",
+      "fullName": "Peter Hammil",
+      "email": "hammil@hammil.vdg",
+      "phone": 104420333,
+      "user": 12
+    }
+  },
+  {
+    "model": "api.order",
+    "pk": 212,
+    "fields": {
+      "createdAt": "2023-09-16T11:21:38.492Z",
+      "paymentType": "online",
+      "deliveryType": "ordinary",
+      "status": "paid",
+      "city": "L",
+      "address": "Enter address of the delivery",
+      "fullName": "Peter Hammil",
+      "email": "hammil@hammil.vdg",
+      "phone": 104420333,
+      "user": 12
+    }
+  },
+  {
+    "model": "api.order",
+    "pk": 213,
+    "fields": {
+      "createdAt": "2023-09-16T11:25:22.271Z",
+      "paymentType": "someone",
+      "deliveryType": "express",
+      "status": "paid",
+      "city": "Enter city of the delivery",
+      "address": "Enter address of the delivery",
+      "fullName": "Peter Hammil",
+      "email": "user@domain.com",
+      "phone": 0,
+      "user": 12
+    }
+  },
+  {
+    "model": "api.order",
+    "pk": 214,
+    "fields": {
+      "createdAt": "2023-09-16T11:46:46.096Z",
+      "paymentType": "someone",
+      "deliveryType": "express",
+      "status": "paid",
+      "city": "London",
+      "address": "Trafalgar square, 1",
+      "fullName": "Peter Hammil",
+      "email": "hammil@hammil.vdg",
+      "phone": 104420333,
+      "user": 12
+    }
+  },
+  {
+    "model": "api.order",
+    "pk": 215,
+    "fields": {
+      "createdAt": "2023-09-16T12:12:43.398Z",
+      "paymentType": "someone",
+      "deliveryType": "express",
+      "status": "paid",
+      "city": "London",
+      "address": "Trafalgar square, 1",
+      "fullName": "Peter Hammil",
+      "email": "hammil@hammil.vdg",
+      "phone": 104420333,
+      "user": 12
+    }
+  },
+  {
+    "model": "api.order",
+    "pk": 216,
+    "fields": {
+      "createdAt": "2023-09-16T12:17:20.310Z",
+      "paymentType": "someone",
+      "deliveryType": "express",
+      "status": "Awaiting payment. Error: Card number can't be longer than 8 digits.",
+      "city": "London",
+      "address": "Trafalgar square, 1",
+      "fullName": "Peter Hammil",
+      "email": "hammil@hammil.vdg",
+      "phone": 104420333,
+      "user": 12
+    }
+  },
+  {
+    "model": "api.order",
+    "pk": 220,
+    "fields": {
+      "createdAt": "2023-09-16T16:04:59.967Z",
+      "paymentType": "someone",
+      "deliveryType": "express",
+      "status": "paid",
+      "city": "Moscow",
+      "address": "2nd Pugachovskaya",
+      "fullName": "Mikhail Nartsissov",
+      "email": "Nartsissov@mail.ru",
+      "phone": 79151358871,
+      "user": 1
+    }
+  },
+  {
+    "model": "api.order",
+    "pk": 221,
+    "fields": {
+      "createdAt": "2023-09-16T17:04:02.340Z",
+      "paymentType": "someone",
+      "deliveryType": "express",
+      "status": "paid",
+      "city": "Moscow",
+      "address": "Kremlin, 1",
+      "fullName": "Mikhail Nartsissov",
+      "email": "Nartsissov@mail.ru",
+      "phone": 79151358871,
+      "user": 1
+    }
+  },
+  {
+    "model": "api.order",
+    "pk": 222,
+    "fields": {
+      "createdAt": "2023-09-17T06:14:50.292Z",
+      "paymentType": "someone",
+      "deliveryType": "express",
+      "status": "paid",
+      "city": "Москва",
+      "address": "2-я Пугачевская\n6 корпус 2\n151",
+      "fullName": "Mikhail Nartsissov",
+      "email": "Nartsissov@mail.ru",
+      "phone": 79151358871,
+      "user": 1
+    }
+  },
+  {
+    "model": "api.order",
+    "pk": 223,
+    "fields": {
+      "createdAt": "2023-09-17T06:17:25.673Z",
+      "paymentType": "online",
+      "deliveryType": "ordinary",
+      "status": "paid",
+      "city": "Москва",
+      "address": "2-я",
+      "fullName": "Mikhail Nartsissov",
+      "email": "Nartsissov@mail.ru",
+      "phone": 79151358871,
+      "user": 1
+    }
+  },
+  {
+    "model": "api.order",
+    "pk": 224,
+    "fields": {
+      "createdAt": "2023-09-17T06:20:26.055Z",
+      "paymentType": "someone",
+      "deliveryType": "express",
+      "status": "paid",
+      "city": "Enter city of the delivery",
+      "address": "Enter address of the delivery",
+      "fullName": "Mikhail Nartsissov",
+      "email": "Nartsissov@mail.ru",
+      "phone": 79151358871,
+      "user": 1
+    }
+  },
+  {
+    "model": "api.order",
+    "pk": 225,
+    "fields": {
+      "createdAt": "2023-09-17T06:21:54.897Z",
+      "paymentType": "someone",
+      "deliveryType": "express",
+      "status": "paid",
+      "city": "Enter city of the delivery",
+      "address": "Enter address of the delivery",
+      "fullName": "Mikhail Nartsissov",
+      "email": "Nartsissov@mail.ru",
+      "phone": 79151358871,
+      "user": 1
+    }
+  },
+  {
+    "model": "api.order",
+    "pk": 226,
+    "fields": {
+      "createdAt": "2023-09-17T06:23:06.951Z",
+      "paymentType": "someone",
+      "deliveryType": "express",
+      "status": "paid",
+      "city": "Enter city of the delivery",
+      "address": "Enter address of the delivery",
+      "fullName": "Mikhail Nartsissov",
+      "email": "Nartsissov@mail.ru",
+      "phone": 79151358871,
+      "user": 1
+    }
+  },
+  {
+    "model": "api.order",
+    "pk": 227,
+    "fields": {
+      "createdAt": "2023-09-17T08:56:44.769Z",
+      "paymentType": "someone",
+      "deliveryType": "ordinary",
+      "status": "paid",
+      "city": "Москва",
+      "address": "2",
+      "fullName": "Михаил Нарциссов",
+      "email": "Nartsissov@mail.ru",
+      "phone": 79151358871,
+      "user": 1
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 317,
+    "fields": {
+      "order": 202,
+      "product": 6,
+      "count": "1"
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 318,
+    "fields": {
+      "order": 202,
+      "product": 8,
+      "count": "1"
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 319,
+    "fields": {
+      "order": 202,
+      "product": 11,
+      "count": "1"
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 320,
+    "fields": {
+      "order": 202,
+      "product": 13,
+      "count": "1"
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 321,
+    "fields": {
+      "order": 203,
+      "product": 5,
+      "count": "2"
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 322,
+    "fields": {
+      "order": 204,
+      "product": 5,
+      "count": "1"
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 323,
+    "fields": {
+      "order": 205,
+      "product": 12,
+      "count": "2"
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 324,
+    "fields": {
+      "order": 206,
+      "product": 10,
+      "count": "2"
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 325,
+    "fields": {
+      "order": 207,
+      "product": 10,
+      "count": "1"
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 326,
+    "fields": {
+      "order": 208,
+      "product": 13,
+      "count": "1"
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 327,
+    "fields": {
+      "order": 209,
+      "product": 2,
+      "count": "1"
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 328,
+    "fields": {
+      "order": 209,
+      "product": 13,
+      "count": "1"
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 329,
+    "fields": {
+      "order": 211,
+      "product": 13,
+      "count": "2"
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 330,
+    "fields": {
+      "order": 212,
+      "product": 9,
+      "count": "1"
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 331,
+    "fields": {
+      "order": 213,
+      "product": 9,
+      "count": "1"
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 332,
+    "fields": {
+      "order": 213,
+      "product": 9,
+      "count": "1"
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 333,
+    "fields": {
+      "order": 214,
+      "product": 6,
+      "count": "1"
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 334,
+    "fields": {
+      "order": 215,
+      "product": 10,
+      "count": "1"
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 335,
+    "fields": {
+      "order": 215,
+      "product": 10,
+      "count": "1"
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 336,
+    "fields": {
+      "order": 216,
+      "product": 11,
+      "count": "1"
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 337,
+    "fields": {
+      "order": 220,
+      "product": 10,
+      "count": "1"
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 338,
+    "fields": {
+      "order": 221,
+      "product": 1,
+      "count": "1"
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 339,
+    "fields": {
+      "order": 221,
+      "product": 5,
+      "count": "1"
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 340,
+    "fields": {
+      "order": 221,
+      "product": 8,
+      "count": "1"
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 347,
+    "fields": {
+      "order": 224,
+      "product": 13,
+      "count": "1"
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 348,
+    "fields": {
+      "order": 225,
+      "product": 10,
+      "count": "1"
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 349,
+    "fields": {
+      "order": 226,
+      "product": 2,
+      "count": "1"
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 350,
+    "fields": {
+      "order": 227,
+      "product": 12,
+      "count": "1"
+    }
+  },
+  {
+    "model": "api.payment",
+    "pk": 5,
+    "fields": {
+      "order": 202,
+      "name": "Сельдерей Ананасов",
+      "number": "5555555555555555",
+      "month": "12",
+      "year": "23",
+      "code": "555"
+    }
+  },
+  {
+    "model": "api.payment",
+    "pk": 6,
+    "fields": {
+      "order": 204,
+      "name": "Customers",
+      "number": "888888888888888",
+      "month": "12",
+      "year": "23",
+      "code": "888"
+    }
+  },
+  {
+    "model": "api.payment",
+    "pk": 7,
+    "fields": {
+      "order": 205,
+      "name": "Сельдерей Ананасов",
+      "number": "33333333",
+      "month": "12",
+      "year": "23",
+      "code": "333"
+    }
+  },
+  {
+    "model": "api.payment",
+    "pk": 8,
+    "fields": {
+      "order": 206,
+      "name": "Михаил Нарциссов",
+      "number": "3333333333333333",
+      "month": "12",
+      "year": "23",
+      "code": "333"
+    }
+  },
+  {
+    "model": "api.payment",
+    "pk": 9,
+    "fields": {
+      "order": 207,
+      "name": "Михаил Нарциссов",
+      "number": "3333333333333333",
+      "month": "12",
+      "year": "23",
+      "code": "333"
+    }
+  },
+  {
+    "model": "api.payment",
+    "pk": 10,
+    "fields": {
+      "order": 208,
+      "name": "Сельдерей Ананасов",
+      "number": "6666666666666666",
+      "month": "12",
+      "year": "23",
+      "code": "666"
+    }
+  },
+  {
+    "model": "api.payment",
+    "pk": 11,
+    "fields": {
+      "order": 209,
+      "name": "Сельдерей Ананасов",
+      "number": "5555555555555555",
+      "month": "12",
+      "year": "23",
+      "code": "555"
+    }
+  },
+  {
+    "model": "api.payment",
+    "pk": 12,
+    "fields": {
+      "order": 211,
+      "name": "Сельдерей Ананасов",
+      "number": "3333333333333333",
+      "month": "12",
+      "year": "23",
+      "code": "333"
+    }
+  },
+  {
+    "model": "api.payment",
+    "pk": 13,
+    "fields": {
+      "order": 212,
+      "name": "Сельдерей Ананасов",
+      "number": "ggg",
+      "month": "12",
+      "year": "23",
+      "code": "eee"
+    }
+  },
+  {
+    "model": "api.payment",
+    "pk": 14,
+    "fields": {
+      "order": 213,
+      "name": "Сельдерей Ананасов",
+      "number": "4444444444444444",
+      "month": "12",
+      "year": "23",
+      "code": "444"
+    }
+  },
+  {
+    "model": "api.payment",
+    "pk": 15,
+    "fields": {
+      "order": 214,
+      "name": "Сельдерей Ананасов",
+      "number": "44444444",
+      "month": "12",
+      "year": "23",
+      "code": "444"
+    }
+  },
+  {
+    "model": "api.payment",
+    "pk": 16,
+    "fields": {
+      "order": 215,
+      "name": "Сельдерей Ананасов",
+      "number": "22222222",
+      "month": "12",
+      "year": "23",
+      "code": "222"
+    }
+  },
+  {
+    "model": "api.payment",
+    "pk": 17,
+    "fields": {
+      "order": 220,
+      "name": "Сельдерей Ананасов",
+      "number": "44444444",
+      "month": "12",
+      "year": "23",
+      "code": "444"
+    }
+  },
+  {
+    "model": "api.payment",
+    "pk": 18,
+    "fields": {
+      "order": 221,
+      "name": "Сельдерей Ананасов",
+      "number": "44444444",
+      "month": "12",
+      "year": "23",
+      "code": "444"
+    }
+  },
+  {
+    "model": "api.payment",
+    "pk": 19,
+    "fields": {
+      "order": 222,
+      "name": "Сельдерей Ананасов",
+      "number": "44444444",
+      "month": "12",
+      "year": "23",
+      "code": "444"
+    }
+  },
+  {
+    "model": "api.payment",
+    "pk": 20,
+    "fields": {
+      "order": 223,
+      "name": "Сельдерей Ананасов",
+      "number": "22222222",
+      "month": "12",
+      "year": "23",
+      "code": "222"
+    }
+  },
+  {
+    "model": "api.payment",
+    "pk": 21,
+    "fields": {
+      "order": 224,
+      "name": "Сельдерей Ананасов",
+      "number": "88888888",
+      "month": "12",
+      "year": "23",
+      "code": "888"
+    }
+  },
+  {
+    "model": "api.payment",
+    "pk": 22,
+    "fields": {
+      "order": 226,
+      "name": "Сельдерей Ананасов",
+      "number": "44444444",
+      "month": "12",
+      "year": "23",
+      "code": "444"
+    }
+  },
+  {
+    "model": "api.payment",
+    "pk": 23,
+    "fields": {
+      "order": 225,
+      "name": "Сельдерей Ананасов",
+      "number": "44444444",
+      "month": "12",
+      "year": "23",
+      "code": "444"
+    }
+  },
+  {
+    "model": "api.payment",
+    "pk": 24,
+    "fields": {
+      "order": 227,
+      "name": "Сельдерей Ананасов",
+      "number": "22222222",
+      "month": "12",
+      "year": "23",
+      "code": "222"
+    }
+  }
+]
