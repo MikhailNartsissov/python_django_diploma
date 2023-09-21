@@ -74,8 +74,7 @@ class SaleProductsListView(ListAPIView):
     serializer_class = SaleProductSerializer
 
     def get_queryset(self):
-        queryset = ProductSale.objects.all().prefetch_related()
-        sort_param = "product_title"
+        queryset = ProductSale.objects.all().order_by("salePrice").prefetch_related()
         return queryset
 
 
@@ -192,7 +191,14 @@ class PopularProductsListView(ListAPIView):
     """
     View for popular products (First 8 products with average rate greater than 4,2)
     """
-    queryset = Product.objects.annotate(rating=Avg("review__rate")).filter(rating__gte=4.2).prefetch_related()[:8]
+    queryset = Product.objects.annotate(
+        rating=Avg("review__rate")
+    ).filter(
+        rating__gte=4.2
+    ).order_by(
+        "rating"
+    ).prefetch_related(
+    )[:8]
     serializer_class = PopularProductsSerializer
 
 
@@ -200,7 +206,7 @@ class LimitedProductsListView(ListAPIView):
     """
     View for limited products (First 16 products with "limited"=True)
     """
-    queryset = Product.objects.filter(limited=True).prefetch_related()[:16]
+    queryset = Product.objects.filter(limited=True).order_by("title").prefetch_related()[:16]
     serializer_class = PopularProductsSerializer
 
 
