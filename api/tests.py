@@ -1,6 +1,5 @@
-import datetime
-
-from django.test import TestCase
+from django.test import TestCase, Client
+from django.utils import timezone
 from django.urls import reverse
 from django.contrib.auth.models import User
 from .models import (
@@ -14,6 +13,8 @@ from .models import (
     Basket,
     Order,
     OrderItem,
+    Profile,
+    ProfileImage,
 )
 
 
@@ -85,7 +86,7 @@ class SaleProductsListViewTestCase(TestCase):
             price=500.67,
             count=3,
             freeDelivery=False,
-            date=datetime.date.today(),
+            date=timezone.now(),
             archived=False,
             limited=False,
             available=True,
@@ -93,8 +94,8 @@ class SaleProductsListViewTestCase(TestCase):
         cls.product_sale = ProductSale.objects.create(
             product=cls.product,
             salePrice=200.67,
-            dateFrom=datetime.date.today(),
-            dateTo=datetime.date.today()
+            dateFrom=timezone.now(),
+            dateTo=timezone.now()
 
         )
 
@@ -125,6 +126,7 @@ class CatalogListViewTsetCase(TestCase):
     """
     @classmethod
     def setUpClass(cls):
+        cls.user = User.objects.create_user("test_catalog_user", "test@test.test", "!@#$%67890qwerty")
         cls.category = Category.objects.create(
             id=123,
             title="video card",
@@ -151,7 +153,7 @@ class CatalogListViewTsetCase(TestCase):
             price=500.67,
             count=3,
             freeDelivery=False,
-            date=datetime.date.today(),
+            date=timezone.now(),
             archived=False,
             limited=False,
             available=True,
@@ -163,14 +165,13 @@ class CatalogListViewTsetCase(TestCase):
             src="/3.png",
             alt="Image alt string"
         )
-        cls.user = User.objects.create_user("test", "test@test.test", "!@#$%67890qwerty")
 
         cls.product_review = Review.objects.create(
             product=cls.product,
             author=cls.user,
             rate=5,
             text="review text",
-            date=datetime.date.today()
+            date=timezone.now()
         )
 
     @classmethod
@@ -211,6 +212,8 @@ class PopularProductsListViewTsetCase(TestCase):
     """
     @classmethod
     def setUpClass(cls):
+        cls.user = User.objects.create_user("test_popular_user", "test@test.test", "!@#$%67890qwerty")
+
         cls.category = Category.objects.create(
             id=123,
             title="video card",
@@ -237,7 +240,7 @@ class PopularProductsListViewTsetCase(TestCase):
             price=500.67,
             count=3,
             freeDelivery=True,
-            date=datetime.date.today(),
+            date=timezone.now(),
             archived=False,
             limited=True,
             available=True,
@@ -249,14 +252,13 @@ class PopularProductsListViewTsetCase(TestCase):
             src="/3.png",
             alt="Image alt string"
         )
-        cls.user = User.objects.create_user("test", "test@test.test", "!@#$%67890qwerty")
 
         cls.product_review = Review.objects.create(
             product=cls.product_one,
             author=cls.user,
             rate=5,
             text="review text",
-            date=datetime.date.today()
+            date=timezone.now()
         )
         cls.product_two = Product.objects.create(
             category=cls.subcategory,
@@ -265,7 +267,7 @@ class PopularProductsListViewTsetCase(TestCase):
             price=500.67,
             count=3,
             freeDelivery=True,
-            date=datetime.date.today(),
+            date=timezone.now(),
             archived=False,
             limited=False,
             available=True,
@@ -283,7 +285,7 @@ class PopularProductsListViewTsetCase(TestCase):
             author=cls.user,
             rate=3,
             text="review text",
-            date=datetime.date.today()
+            date=timezone.now()
         )
 
     @classmethod
@@ -325,6 +327,8 @@ class LimitedProductsListViewTsetCase(TestCase):
     """
     @classmethod
     def setUpClass(cls):
+        cls.user = User.objects.create_user("test_limited_user", "test@test.test", "!@#$%67890qwerty")
+
         cls.category = Category.objects.create(
             id=123,
             title="video card",
@@ -351,7 +355,7 @@ class LimitedProductsListViewTsetCase(TestCase):
             price=500.67,
             count=3,
             freeDelivery=True,
-            date=datetime.date.today(),
+            date=timezone.now(),
             archived=False,
             limited=True,
             available=True,
@@ -363,14 +367,13 @@ class LimitedProductsListViewTsetCase(TestCase):
             src="/3.png",
             alt="Image alt string"
         )
-        cls.user = User.objects.create_user("test", "test@test.test", "!@#$%67890qwerty")
 
         cls.product_review = Review.objects.create(
             product=cls.product_one,
             author=cls.user,
             rate=5,
             text="review text",
-            date=datetime.date.today()
+            date=timezone.now()
         )
         cls.product_two = Product.objects.create(
             category=cls.subcategory,
@@ -379,7 +382,7 @@ class LimitedProductsListViewTsetCase(TestCase):
             price=500.67,
             count=3,
             freeDelivery=True,
-            date=datetime.date.today(),
+            date=timezone.now(),
             archived=False,
             limited=False,
             available=True,
@@ -397,7 +400,7 @@ class LimitedProductsListViewTsetCase(TestCase):
             author=cls.user,
             rate=5,
             text="review text",
-            date=datetime.date.today()
+            date=timezone.now()
         )
 
     @classmethod
@@ -439,6 +442,8 @@ class BannerListViewTsetCase(TestCase):
     """
     @classmethod
     def setUpClass(cls):
+        cls.user = User.objects.create_user("test_banner_user", "test@test.test", "!@#$%67890qwerty")
+
         cls.category_one = Category.objects.create(
             id=123,
             title="video card",
@@ -497,7 +502,7 @@ class BannerListViewTsetCase(TestCase):
             price=500.67,
             count=3,
             freeDelivery=True,
-            date=datetime.date.today(),
+            date=timezone.now(),
             archived=False,
             limited=True,
             available=True,
@@ -509,14 +514,13 @@ class BannerListViewTsetCase(TestCase):
             src="/3.png",
             alt="Image alt string"
         )
-        cls.user = User.objects.create_user("test", "test@test.test", "!@#$%67890qwerty")
 
         cls.product_review = Review.objects.create(
             product=cls.product_one,
             author=cls.user,
             rate=5,
             text="review text",
-            date=datetime.date.today()
+            date=timezone.now()
         )
         cls.product_two = Product.objects.create(
             category=cls.subcategory_two,
@@ -525,7 +529,7 @@ class BannerListViewTsetCase(TestCase):
             price=1600.67,
             count=5,
             freeDelivery=True,
-            date=datetime.date.today(),
+            date=timezone.now(),
             archived=False,
             limited=False,
             available=True,
@@ -543,7 +547,7 @@ class BannerListViewTsetCase(TestCase):
             author=cls.user,
             rate=4,
             text="review text",
-            date=datetime.date.today()
+            date=timezone.now()
         )
         cls.product_three = Product.objects.create(
             category=cls.subcategory_three,
@@ -552,7 +556,7 @@ class BannerListViewTsetCase(TestCase):
             price=800.67,
             count=3,
             freeDelivery=True,
-            date=datetime.date.today(),
+            date=timezone.now(),
             archived=False,
             limited=False,
             available=True,
@@ -570,7 +574,7 @@ class BannerListViewTsetCase(TestCase):
             author=cls.user,
             rate=5,
             text="review text",
-            date=datetime.date.today()
+            date=timezone.now()
         )
 
     @classmethod
@@ -615,7 +619,7 @@ class BasketViewSetTestCase(TestCase):
     """
     @classmethod
     def setUpClass(cls):
-        cls.user = User.objects.create_user("test_user", "test@test.test", "!@#$%67890qwerty")
+        cls.user = User.objects.create_user("test_basket_user", "test@test.test", "!@#$%67890qwerty")
 
         cls.category_one = Category.objects.create(
             id=123,
@@ -675,7 +679,7 @@ class BasketViewSetTestCase(TestCase):
             price=500.67,
             count=3,
             freeDelivery=True,
-            date=datetime.date.today(),
+            date=timezone.now(),
             archived=False,
             limited=True,
             available=True,
@@ -687,14 +691,13 @@ class BasketViewSetTestCase(TestCase):
             src="/3.png",
             alt="Image alt string"
         )
-        cls.user = User.objects.create_user("test_basket_user", "test@test.test", "!@#$%67890qwerty")
 
         cls.product_review = Review.objects.create(
             product=cls.product_one,
             author=cls.user,
             rate=5,
             text="review text",
-            date=datetime.date.today()
+            date=timezone.now()
         )
         cls.product_two = Product.objects.create(
             category=cls.subcategory_two,
@@ -703,7 +706,7 @@ class BasketViewSetTestCase(TestCase):
             price=1600.67,
             count=5,
             freeDelivery=True,
-            date=datetime.date.today(),
+            date=timezone.now(),
             archived=False,
             limited=False,
             available=True,
@@ -721,7 +724,7 @@ class BasketViewSetTestCase(TestCase):
             author=cls.user,
             rate=4,
             text="review text",
-            date=datetime.date.today()
+            date=timezone.now()
         )
         cls.product_three = Product.objects.create(
             category=cls.subcategory_three,
@@ -730,7 +733,7 @@ class BasketViewSetTestCase(TestCase):
             price=800.67,
             count=3,
             freeDelivery=True,
-            date=datetime.date.today(),
+            date=timezone.now(),
             archived=False,
             limited=False,
             available=True,
@@ -748,26 +751,26 @@ class BasketViewSetTestCase(TestCase):
             author=cls.user,
             rate=5,
             text="review text",
-            date=datetime.date.today()
+            date=timezone.now()
         )
 
         cls.basket_one = Basket.objects.create(
             user=cls.user,
-            date=datetime.date.today(),
+            date=timezone.now(),
             product=cls.product_one,
             count=5,
         )
 
         cls.basket_two = Basket.objects.create(
             user=cls.user,
-            date=datetime.date.today(),
+            date=timezone.now(),
             product=cls.product_two,
             count=10,
         )
 
         cls.basket_three = Basket.objects.create(
             user=cls.user,
-            date=datetime.date.today(),
+            date=timezone.now(),
             product=cls.product_three,
             count=2,
         )
@@ -875,7 +878,7 @@ class OrderViewSetTestCase(TestCase):
     """
     @classmethod
     def setUpClass(cls):
-        cls.user = User.objects.create_user("test_oder_user", "test@test.test", "!@#$%67890qwerty")
+        cls.user = User.objects.create_user("test_order_user", "test@test.test", "!@#$%67890qwerty")
 
         cls.category_one = Category.objects.create(
             id=123,
@@ -935,7 +938,7 @@ class OrderViewSetTestCase(TestCase):
             price=500.67,
             count=3,
             freeDelivery=True,
-            date=datetime.date.today(),
+            date=timezone.now(),
             archived=False,
             limited=True,
             available=True,
@@ -947,14 +950,13 @@ class OrderViewSetTestCase(TestCase):
             src="/3.png",
             alt="Image alt string"
         )
-        cls.user = User.objects.create_user("test", "test@test.test", "!@#$%67890qwerty")
 
         cls.product_review = Review.objects.create(
             product=cls.product_one,
             author=cls.user,
             rate=5,
             text="review text",
-            date=datetime.date.today()
+            date=timezone.now()
         )
         cls.product_two = Product.objects.create(
             category=cls.subcategory_two,
@@ -963,7 +965,7 @@ class OrderViewSetTestCase(TestCase):
             price=1600.67,
             count=5,
             freeDelivery=True,
-            date=datetime.date.today(),
+            date=timezone.now(),
             archived=False,
             limited=False,
             available=True,
@@ -981,7 +983,7 @@ class OrderViewSetTestCase(TestCase):
             author=cls.user,
             rate=4,
             text="review text",
-            date=datetime.date.today()
+            date=timezone.now()
         )
         cls.product_three = Product.objects.create(
             category=cls.subcategory_three,
@@ -990,7 +992,7 @@ class OrderViewSetTestCase(TestCase):
             price=800.67,
             count=3,
             freeDelivery=True,
-            date=datetime.date.today(),
+            date=timezone.now(),
             archived=False,
             limited=False,
             available=True,
@@ -1008,11 +1010,11 @@ class OrderViewSetTestCase(TestCase):
             author=cls.user,
             rate=5,
             text="review text",
-            date=datetime.date.today()
+            date=timezone.now()
         )
 
         cls.order_one = Order.objects.create(
-            createdAt=datetime.date.today(),
+            createdAt=timezone.now(),
             paymentType="online",
             deliveryType="ordinary",
             status="accepted",
@@ -1025,7 +1027,7 @@ class OrderViewSetTestCase(TestCase):
         )
 
         cls.order_two = Order.objects.create(
-            createdAt=datetime.date.today(),
+            createdAt=timezone.now(),
             paymentType="random",
             deliveryType="express",
             status="Awaiting payment",
@@ -1038,7 +1040,7 @@ class OrderViewSetTestCase(TestCase):
         )
 
         cls.order_three = Order.objects.create(
-            createdAt=datetime.date.today(),
+            createdAt=timezone.now(),
             paymentType="other",
             deliveryType="express",
             status="paid",
@@ -1288,7 +1290,7 @@ class PaymentCreateViewTestCase(TestCase):
         cls.user = User.objects.create_user("test_payment_user", "test@test.test", "!@#$%67890qwerty")
 
         cls.order_one = Order.objects.create(
-            createdAt=datetime.date.today(),
+            createdAt=timezone.now(),
             paymentType="online",
             deliveryType="ordinary",
             status="accepted",
